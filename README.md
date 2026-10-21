@@ -3,6 +3,14 @@
 > **فریم‌ورک فوق‌سریع، ناهمگام (Async) و مدرن پایتون برای پیام‌رسان و سوپراپ روبیکا**  
 > *Next-Generation High-Performance Async Python Framework for Rubika Messenger & SuperApp*
 
+[![PyPI version](https://img.shields.io/pypi/v/rubiflow.svg?color=blue)](https://pypi.org/project/rubiflow/)
+[![Documentation](https://img.shields.io/badge/docs-GitHub%20Pages-0088cc.svg)](https://iliasync.github.io/rubiflow/)
+[![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
+
+📚 **وب‌سایت مستندات آنلاین (مشابه Telegram Bot API):**  
+👉 **[https://iliasync.github.io/rubiflow/](https://iliasync.github.io/rubiflow/)**
+
 ---
 
 ## 🌟 چرا RubiFlow؟
@@ -20,12 +28,12 @@
 ## 📦 نصب
 
 ```bash
-pip install -e .
+pip install rubiflow
 ```
 
-یا پیش‌نیازها:
+یا نصب نسخه سورس مستقیم از گیت‌هاب:
 ```bash
-pip install aiohttp cryptography
+pip install git+https://github.com/iliasync/rubiflow.git
 ```
 
 ---
