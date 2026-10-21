@@ -28,7 +28,7 @@ class Client(Methods):
     DEFAULT_DC_URL = "https://messengerg2c332.iranlms.ir"
     DEFAULT_SESSION_NAME = "rubiflow"
     LIB_NAME = "RubiFlow"
-    LIB_VERSION = "1.0.0"
+    LIB_VERSION = "1.0.1"
 
     # Rubika protocol standard client signature
     _INTERNAL_CLIENT = {

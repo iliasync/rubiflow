@@ -63,7 +63,7 @@ TARGET_CHANNELS = [
 ANNOUNCEMENT = """
 🔥 **RubiFlow Update Released!**
 
-Version 1.0.0 is now live on PyPI with:
+Version 1.0.1 is now live on PyPI with:
 - Pyrogram-style session naming
 - Terminal interactive login
 - Robust 2FA password handling

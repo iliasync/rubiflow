@@ -15,7 +15,7 @@ from .exceptions import (
 from .models import Chat, Message, User
 from .session import Session
 
-__version__ = "1.0.0"
+__version__ = "1.0.1"
 __author__ = "RubiFlow Team"
 
 __all__ = [
