@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>RubiFlow Documentation - High-Performance Async Rubika Framework</title>
+  <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+  <meta name="description" content="High-Performance Async Python Framework for Rubika Messenger & SuperApp">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/style.min.css" />
+  <style>
+    :root {
+      --docsify-primary: #0088cc;
+      --theme-color: #0088cc;
+    }
+    .markdown-section table {
+      display: table;
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 1.5rem;
+    }
+    .markdown-section th {
+      background-color: #2481cc;
+      color: #ffffff;
+      font-weight: 600;
+      padding: 10px 14px;
+      border: 1px solid #1c72b8;
+    }
+    .markdown-section td {
+      padding: 10px 14px;
+      border: 1px solid #e1e8ed;
+    }
+    .markdown-section code {
+      color: #0088cc;
+      background: rgba(0, 136, 204, 0.08);
+      padding: 2px 6px;
+      border-radius: 4px;
+      font-family: 'JetBrains Mono', Consolas, Monaco, monospace;
+      font-size: 0.9em;
+    }
+    .sidebar-nav li strong {
+      color: #0088cc;
+    }
+    .app-name-link img {
+      width: 32px;
+      vertical-align: middle;
+      margin-right: 8px;
+    }
+    .badge {
+      display: inline-block;
+      padding: 3px 8px;
+      font-size: 11px;
+      font-weight: bold;
+      border-radius: 12px;
+      color: #fff;
+    }
+    .badge-get, .badge.get { background-color: #00a884; }
+    .badge-post, .badge.post { background-color: #0088cc; }
+    .badge-async, .badge.async { background-color: #7b1fa2; }
+  </style>
+</head>
+<body>
+  <div id="app">Loading RubiFlow Documentation...</div>
+  <script>
+    window.$docsify = {
+      name: '⚡ RubiFlow',
+      repo: 'https://github.com/iliasync/rubiflow',
+      loadSidebar: true,
+      subMaxLevel: 3,
+      auto2top: true,
+      search: {
+        maxAge: 86400000,
+        paths: 'auto',
+        placeholder: 'Search 300+ methods, parameters...',
+        noData: 'No results found!',
+        depth: 4
+      },
+      copyCode: {
+        buttonText: 'Copy',
+        errorText: 'Error',
+        successText: 'Copied!'
+      },
+      pagination: {
+        previousText: 'Previous',
+        nextText: 'Next',
+        crossChapter: true
+      }
+    }
+  </script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/docsify.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify@4/lib/plugins/search.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-copy-code/dist/docsify-copy-code.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-pagination/dist/docsify-pagination.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/docsify-darklight-theme@latest/dist/index.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-python.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+  <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-bash.min.js"></script>
+</body>
+</html>

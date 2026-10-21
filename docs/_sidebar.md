@@ -1,0 +1,24 @@
+- **Getting Started**
+  - [Introduction](README.md)
+  - [Installation](installation.md)
+  - [Authentication & Sessions](authentication.md)
+  - [Building Bots (Event API)](bot_api.md)
+
+- **Complete API Reference**
+  - [Overview](api_reference.md)
+  - [Messaging & Polls](methods_messages.md)
+  - [Chats & Dialogs](methods_chats.md)
+  - [Groups & Voice Chats](methods_groups.md)
+  - [Channels & Broadcasts](methods_channels.md)
+  - [Users & Contacts](methods_users.md)
+  - [Cloud Files & CDN](methods_files.md)
+  - [Folders & Organization](methods_folders.md)
+  - [Settings & Privacy](methods_settings.md)
+  - [Rubino Social Network](methods_rubino.md)
+  - [VOD Movies & Series](methods_vod.md)
+  - [Wallet & Payments](methods_wallet.md)
+  - [Direct Invoker (`invoke`)](methods_invoker.md)
+
+- **Deep Dive**
+  - [V6 Cryptography & Security](cryptography.md)
+  - [All 301 Methods Catalog](RUBIKA_API_FULL_REFERENCE.md)
