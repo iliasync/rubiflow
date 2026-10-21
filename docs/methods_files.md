@@ -1,63 +1,94 @@
-# 📁 Cloud Files & CDN API
+# 📁 Cloud Files, CDN & Stickers API
 
-RubiFlow handles high-speed chunked uploading and downloading across Rubika's distributed media CDN clusters.
+RubiFlow handles high-speed uploading and downloading across Rubika's distributed media CDN storage clusters.
 
 ---
 
 ### `upload_file`
-<span class="badge post">POST</span> <span class="badge async">Async</span>
+<span class="badge badge-post">POST</span> <span class="badge badge-async">Async</span>
 
-Uploads a local file or raw bytes to Rubika CDN nodes and returns file metadata ready to be attached to messages or posts.
+Uploads a local file or in-memory byte buffer to Rubika CDN nodes and returns file metadata ready to be attached to messages or posts.
 
 #### Parameters
-| Parameter | Type | Required | Description |
-| :--- | :--- | :--- | :--- |
-| `file_input` | `str \| bytes` | Yes | Local file path (`str`) or raw file contents in memory (`bytes`). |
-| `file_name` | `str` | No | Explicit file name. If omitted, extracted from path. |
-| `mime` | `str` | No | MIME type of the file. Defaults to `'application/octet-stream'`. |
+| Parameter | Type | Required | Default | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `file_input` | `Union[str, bytes]` | Yes | - | File path on disk (`str`) or raw file bytes in memory (`bytes`). |
+| `file_name` | `str` | No | `None` | Custom file name. If omitted, derived from path or generated. |
+| `mime` | `str` | No | `'application/octet-stream'` | MIME type (e.g. `'image/jpeg'`, `'video/mp4'`). |
 
 #### Return Value
-```python
+Returns a file metadata dictionary:
+```json
 {
-    "file_id": "1234567890",
-    "access_hash_send": "9876543210...",
-    "mime": "image/jpeg",
-    "size": 1048576,
-    "file_name": "photo.jpg"
+  "file_id": "1049285712",
+  "access_hash_send": "349102847501928471029384",
+  "mime": "image/png",
+  "size": 492048,
+  "file_name": "screenshot.png",
+  "cdn_url": "https://storage.iranlms.ir/..."
 }
 ```
 
 #### Code Example
 ```python
-file_meta = await app.upload_file("wallpaper.jpg", mime="image/jpeg")
-print(f"Uploaded File ID: {file_meta['file_id']}")
+# Upload from disk path
+meta = await app.upload_file("charts/report.pdf", mime="application/pdf")
+print(f"Uploaded file ID: {meta['file_id']}")
+
+# Upload in-memory bytes
+import io
+bio = io.BytesIO(b"Hello Rubika Cloud File")
+meta2 = await app.upload_file(bio.getvalue(), file_name="memo.txt", mime="text/plain")
 ```
 
 ---
 
 ### `download_file`
-<span class="badge post">POST</span> <span class="badge async">Async</span>
+<span class="badge badge-post">POST</span> <span class="badge badge-async">Async</span>
 
-Downloads a file from Rubika CDN using its `file_id` and `access_hash_rec`.
+Downloads a media file or document from Rubika CDN nodes.
 
 #### Parameters
-| Parameter | Type | Required | Description |
-| :--- | :--- | :--- | :--- |
-| `file_id` | `str \| int` | Yes | File identifier. |
-| `access_hash_rec` | `str` | Yes | Received access hash for the file. |
-| `save_path` | `str` | No | Local destination file path. If `None`, returns raw `bytes`. |
+| Parameter | Type | Required | Default | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `file_id` | `Union[str, int]` | Yes | - | Unique file identifier. |
+| `access_hash_rec` | `str` | Yes | - | Received access hash for the file. |
+| `save_path` | `str` | No | `None` | Local destination file path. If `None`, returns raw `bytes`. |
 
 #### Code Example
 ```python
-# Download to disk
-await app.download_file(file_id="12345", access_hash_rec="hash...", save_path="downloaded.png")
+# Download and save to disk
+await app.download_file(
+    file_id="1049285712",
+    access_hash_rec="349102847501928471029384",
+    save_path="downloads/photo.jpg"
+)
 
-# Download to memory
-data_bytes = await app.download_file(file_id="12345", access_hash_rec="hash...")
+# Download into memory as bytes
+file_bytes = await app.download_file(
+    file_id="1049285712",
+    access_hash_rec="349102847501928471029384"
+)
+print("Downloaded size:", len(file_bytes), "bytes")
 ```
 
 ---
 
-### Stickers
-- **`get_trend_sticker_sets()`**: Retrieves list of trending sticker packs.
-- **`get_my_sticker_sets()`**: Lists user's saved sticker collections.
+### `request_send_file`
+<span class="badge badge-post">POST</span> <span class="badge badge-async">Async</span>
+
+Low-level method to request an upload token and assigned storage CDN endpoint for a file before streaming chunks.
+
+#### Parameters
+| Parameter | Type | Required | Default | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `file_name` | `str` | Yes | - | File name. |
+| `size` | `int` | Yes | - | Size of the file in bytes. |
+| `mime` | `str` | Yes | - | MIME type. |
+
+---
+
+### Sticker Packs
+
+- **`get_trend_sticker_sets() -> List[Dict[str, Any]]`**: Retrieves a list of trending and featured sticker sets.
+- **`get_my_sticker_sets() -> List[Dict[str, Any]]`**: Lists the user's saved sticker pack collections.

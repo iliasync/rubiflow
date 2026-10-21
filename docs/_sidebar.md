@@ -1,11 +1,15 @@
 - **Getting Started**
   - [Introduction](README.md)
-  - [Installation](installation.md)
+  - [Installation Guide](installation.md)
   - [Authentication & Sessions](authentication.md)
   - [Building Bots (Event API)](bot_api.md)
 
+- **Data Models & Types**
+  - [Available Types](types.md)
+  - [Errors & Exceptions](errors.md)
+
 - **Complete API Reference**
-  - [Overview](api_reference.md)
+  - [API Overview](api_reference.md)
   - [Messaging & Polls](methods_messages.md)
   - [Chats & Dialogs](methods_chats.md)
   - [Groups & Voice Chats](methods_groups.md)
@@ -13,11 +17,15 @@
   - [Users & Contacts](methods_users.md)
   - [Cloud Files & CDN](methods_files.md)
   - [Folders & Organization](methods_folders.md)
-  - [Settings & Privacy](methods_settings.md)
+  - [Settings, 2FA & Privacy](methods_settings.md)
   - [Rubino Social Network](methods_rubino.md)
   - [VOD Movies & Series](methods_vod.md)
   - [Wallet & Payments](methods_wallet.md)
   - [Direct Invoker (`invoke`)](methods_invoker.md)
+
+- **Cookbook & Best Practices**
+  - [Recipes & Practical Bots](cookbook.md)
+  - [FAQ & Architecture](faq.md)
 
 - **Deep Dive**
   - [V6 Cryptography & Security](cryptography.md)

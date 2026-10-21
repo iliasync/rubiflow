@@ -1,119 +1,150 @@
 # 👥 Groups & Voice Chats API
 
-Methods for managing supergroups, member administration, permission control, and WebRTC voice chats.
+Comprehensive reference for managing supergroups, member administration, permission moderation, and WebRTC voice chats.
 
 ---
 
 ### `create_group`
-<span class="badge post">POST</span> <span class="badge async">Async</span>
+<span class="badge badge-post">POST</span> <span class="badge badge-async">Async</span>
 
-Creates a new supergroup chat.
+Creates a new group conversation.
 
 #### Parameters
-| Parameter | Type | Required | Description |
-| :--- | :--- | :--- | :--- |
-| `title` | `str` | Yes | Name of the group (1-255 characters). |
-| `member_guids` | `List[str]` | No | Initial list of user GUIDs to add to the group. |
+| Parameter | Type | Required | Default | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `title` | `str` | Yes | - | Group name (1-255 characters). |
+| `member_guids` | `List[str]` | No | `None` | Initial list of user GUIDs to invite into the group. |
+
+#### Return Value
+```json
+{
+  "status": "OK",
+  "data": {
+    "group": {
+      "group_guid": "g0ABCDEF1234567890",
+      "group_title": "RubiFlow Developers",
+      "count_members": 2
+    }
+  }
+}
+```
 
 #### Code Example
 ```python
-result = await app.create_group(
-    title="RubiFlow Developers Group",
+res = await app.create_group(
+    title="RubiFlow Community",
     member_guids=["u0ABCDEF12345"]
 )
-group_guid = result["group"]["group_guid"]
-print(f"New Group Created: {group_guid}")
+group_guid = res["group"]["group_guid"]
+print("Created group:", group_guid)
 ```
 
 ---
 
 ### `get_group_info`
-<span class="badge post">POST</span> <span class="badge async">Async</span>
+<span class="badge badge-post">POST</span> <span class="badge badge-async">Async</span>
 
-Retrieves full group metadata including member count, description, invite link, and avatar.
+Retrieves full metadata for a group, including member count, description, invite link, and avatar.
 
 #### Parameters
-| Parameter | Type | Required | Description |
-| :--- | :--- | :--- | :--- |
-| `group_guid` | `str` | Yes | Group GUID (`g...`). |
-
-#### Code Example
-```python
-info = await app.get_group_info("g0ABCDEF12345")
-print(f"Group: {info['group']['group_title']}")
-print(f"Members: {info['group']['count_members']}")
-print(f"Description: {info['group']['description']}")
-```
+| Parameter | Type | Required | Default | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `group_guid` | `str` | Yes | - | Target group GUID (`g0...`). |
 
 ---
 
 ### `add_group_members`
-<span class="badge post">POST</span> <span class="badge async">Async</span>
+<span class="badge badge-post">POST</span> <span class="badge badge-async">Async</span>
 
 Adds one or more users to a group.
 
 #### Parameters
-| Parameter | Type | Required | Description |
-| :--- | :--- | :--- | :--- |
-| `group_guid` | `str` | Yes | Target group GUID. |
-| `member_guids` | `List[str]` | Yes | List of user GUIDs to add. |
+| Parameter | Type | Required | Default | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `group_guid` | `str` | Yes | - | Target group GUID. |
+| `member_guids` | `List[str]` | Yes | - | List of user GUIDs to add. |
 
 ---
 
 ### `ban_group_member`
-<span class="badge post">POST</span> <span class="badge async">Async</span>
+<span class="badge badge-post">POST</span> <span class="badge badge-async">Async</span>
 
-Removes and kicks a user from a group.
+Kicks and bans a user from a group.
 
 #### Parameters
-| Parameter | Type | Required | Description |
-| :--- | :--- | :--- | :--- |
-| `group_guid` | `str` | Yes | Target group GUID. |
-| `member_guid` | `str` | Yes | User GUID to ban/kick. |
+| Parameter | Type | Required | Default | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `group_guid` | `str` | Yes | - | Target group GUID. |
+| `member_guid` | `str` | Yes | - | User GUID to ban. |
+
+#### Code Example
+```python
+# Kick a spammer
+await app.ban_group_member("g0ABCDEF...", "u0SpammerGUID...")
+```
 
 ---
 
 ### `set_group_admin`
-<span class="badge post">POST</span> <span class="badge async">Async</span>
+<span class="badge badge-post">POST</span> <span class="badge badge-async">Async</span>
 
-Promotes a user to an administrator with specific fine-grained privileges, or demotes them.
+Promotes a member to administrator with granular permissions, or revokes admin status.
 
 #### Parameters
-| Parameter | Type | Required | Description |
-| :--- | :--- | :--- | :--- |
-| `group_guid` | `str` | Yes | Target group GUID. |
-| `member_guid` | `str` | Yes | User GUID to promote or demote. |
-| `access_list` | `List[str]` | Yes | List of granted permissions: `['ChangeInfo', 'PinMessages', 'DeleteMessages', 'BanMember', 'SetAdmin']`. |
-| `action` | `str` | No | `'SetAdmin'` or `'UnsetAdmin'`. Defaults to `'SetAdmin'`. |
+| Parameter | Type | Required | Default | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `group_guid` | `str` | Yes | - | Target group GUID. |
+| `member_guid` | `str` | Yes | - | Target user GUID. |
+| `access_list` | `List[str]` | Yes | - | Privileges: `['ChangeInfo', 'PinMessages', 'DeleteMessages', 'BanMember', 'SetAdmin']`. |
+| `action` | `str` | No | `'SetAdmin'` | `'SetAdmin'` or `'UnsetAdmin'`. |
+
+---
+
+### `set_group_default_access`
+<span class="badge badge-post">POST</span> <span class="badge badge-async">Async</span>
+
+Configures default permissions for all regular group members (e.g. lock group from sending messages or media).
+
+#### Parameters
+| Parameter | Type | Required | Default | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `group_guid` | `str` | Yes | - | Target group GUID. |
+| `default_access` | `List[str]` | Yes | - | Allowed actions: `['SendMessages', 'SendMedia']`. |
 
 #### Code Example
 ```python
-await app.set_group_admin(
+# Mute group for regular members (night mode)
+await app.set_group_default_access(
     group_guid="g0ABCDEF...",
-    member_guid="u0ABCDEF...",
-    access_list=["DeleteMessages", "PinMessages"],
-    action="SetAdmin"
+    default_access=[]
 )
 ```
 
 ---
 
-### `set_group_default_access`
-<span class="badge post">POST</span> <span class="badge async">Async</span>
+### `edit_group_info`
+<span class="badge badge-post">POST</span> <span class="badge badge-async">Async</span>
 
-Sets default permissions for all regular members in a group (e.g. restrict sending media or messages).
+Updates group title or bio/description.
 
 #### Parameters
-| Parameter | Type | Required | Description |
-| :--- | :--- | :--- | :--- |
-| `group_guid` | `str` | Yes | Target group GUID. |
-| `default_access` | `List[str]` | Yes | Allowed permissions for standard members: `['SendMessages', 'SendMedia']`. |
+| Parameter | Type | Required | Default | Description |
+| :--- | :--- | :--- | :--- | :--- |
+| `group_guid` | `str` | Yes | - | Target group GUID. |
+| `title` | `str` | No | `None` | New group title. |
+| `description` | `str` | No | `None` | New group description. |
 
 ---
 
-### Voice Chat Controls (WebRTC)
-Rubika supports native audio voice chats in groups.
+### `leave_group`
+<span class="badge badge-post">POST</span> <span class="badge badge-async">Async</span>
 
-- **`create_group_voice_chat(group_guid, title=None)`**: Starts a new group voice chat room.
-- **`join_group_voice_chat(group_guid, voice_chat_id, sdp_offer)`**: Submits a WebRTC SDP offer to join audio.
-- **`discard_group_voice_chat(group_guid, voice_chat_id)`**: Ends and closes the voice chat room.
+Leaves and exits a group.
+
+---
+
+### WebRTC Voice Chats
+
+- **`create_group_voice_chat(group_guid: str, title: Optional[str] = None)`**: Starts an interactive group audio voice chat room.
+- **`join_group_voice_chat(group_guid: str, voice_chat_id: str, sdp_offer: str)`**: Submits a WebRTC SDP offer to connect audio streams.
+- **`discard_group_voice_chat(group_guid: str, voice_chat_id: str)`**: Ends and closes the voice chat room.
