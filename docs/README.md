@@ -2,7 +2,7 @@
 
 > **Next-Generation High-Performance Async Python Framework for Rubika Messenger & SuperApp**
 
-[![PyPI version](https://img.shields.io/pypi/v/rubiflow.svg?color=blue)](https://pypi.org/project/rubiflow/)
+[![PyPI version](https://img.shields.io/badge/pypi-v1.0.1-0088cc.svg?logo=pypi&logoColor=white)](https://pypi.org/project/rubiflow/)
 [![Python 3.9+](https://img.shields.io/badge/python-3.9+-blue.svg)](https://www.python.org/downloads/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](https://opensource.org/licenses/MIT)
 [![Asyncio](https://img.shields.io/badge/asyncio-powered-purple.svg)](https://docs.python.org/3/library/asyncio.html)
