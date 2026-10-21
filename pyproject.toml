@@ -4,7 +4,7 @@ build-backend = "setuptools.build_meta"
 
 [project]
 name = "rubiflow"
-version = "1.0.1"
+version = "1.0.0"
 description = "High-Performance Async Python Framework for Rubika Messenger and SuperApp"
 readme = "README.md"
 authors = [{ name = "RubiFlow Developers" }]
