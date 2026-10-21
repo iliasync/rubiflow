@@ -174,5 +174,63 @@ class TestClientMethodsExistence(unittest.TestCase):
         self.assertTrue(hasattr(app, "get_wallet_status"))
 
 
+
+class TestSessionNamingAndInteractiveLogin(unittest.TestCase):
+    def test_default_session_naming(self):
+        app = Client(interactive=False)
+        self.assertEqual(app.session.file_path, "rubiflow.session")
+        self.assertFalse(app.session.is_authenticated)
+
+    def test_custom_session_naming(self):
+        app1 = Client("my_bot", interactive=False)
+        self.assertEqual(app1.session.file_path, "my_bot.session")
+
+        app2 = Client("custom.session", interactive=False)
+        self.assertEqual(app2.session.file_path, "custom.session")
+
+        app3 = Client(session_name="account1", interactive=False)
+        self.assertEqual(app3.session.file_path, "account1.session")
+
+    def test_phone_number_cleaning(self):
+        self.assertEqual(Client._clean_phone_number("+98 912 345 6789"), "989123456789")
+        self.assertEqual(Client._clean_phone_number("09123456789"), "989123456789")
+        self.assertEqual(Client._clean_phone_number("9123456789"), "989123456789")
+        self.assertEqual(Client._clean_phone_number("00989123456789"), "989123456789")
+
+    def test_session_save_and_load(self):
+        import tempfile
+        import os
+
+        with tempfile.NamedTemporaryFile(suffix=".session", delete=False) as tf:
+            path = tf.name
+
+        try:
+            sess = Session(
+                auth="my_auth_token_32chars1234567890",
+                private_key_pem="pem_key",
+                user_guid="u01234",
+                phone="989123456789",
+                is_authenticated=True,
+                file_path=path,
+            )
+            sess.save()
+
+            loaded = Session.load_from_file(path)
+            self.assertEqual(loaded.auth, "my_auth_token_32chars1234567890")
+            self.assertEqual(loaded.user_guid, "u01234")
+            self.assertEqual(loaded.phone, "989123456789")
+            self.assertTrue(loaded.is_authenticated)
+            self.assertEqual(loaded.file_path, path)
+
+            # Test loading via Client
+            client = Client(path, interactive=False)
+            self.assertTrue(client.session.is_authenticated)
+            self.assertEqual(client.session.auth, "my_auth_token_32chars1234567890")
+        finally:
+            if os.path.exists(path):
+                os.remove(path)
+
+
 if __name__ == "__main__":
     unittest.main()
+

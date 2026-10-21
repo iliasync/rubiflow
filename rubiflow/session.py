@@ -24,12 +24,33 @@ class Session:
         dc_url: str = "https://messengerg2c332.iranlms.ir",
         user_guid: Optional[str] = None,
         phone: Optional[str] = None,
+        is_authenticated: bool = True,
+        file_path: Optional[str] = None,
     ):
         self.auth = auth
         self.private_key_pem = private_key_pem
         self.dc_url = dc_url
         self.user_guid = user_guid
         self.phone = phone
+        self.is_authenticated = is_authenticated
+        self.file_path = file_path
+
+    @classmethod
+    def new_temporary(
+        cls,
+        file_path: Optional[str] = None,
+        dc_url: str = "https://messengerg2c332.iranlms.ir",
+    ) -> "Session":
+        """Generates a temporary session with a new RSA key pair for initial login."""
+        priv, _ = RubiFlowCrypto.generate_rsa_key_pair()
+        tmp = RubiFlowCrypto.generate_tmp_session(32)
+        return cls(
+            auth=tmp,
+            private_key_pem=priv,
+            dc_url=dc_url,
+            is_authenticated=False,
+            file_path=file_path,
+        )
 
     def to_string(self) -> str:
         """Serializes the session to a compact base64 StringSession."""
@@ -57,7 +78,15 @@ class Session:
             dc_url=data.get("dc", "https://messengerg2c332.iranlms.ir"),
             user_guid=data.get("guid"),
             phone=data.get("phone"),
+            is_authenticated=True,
         )
+
+    def save(self, file_path: Optional[str] = None) -> None:
+        """Saves session metadata to the associated file path or specified file."""
+        target_path = file_path or self.file_path
+        if not target_path:
+            raise RubiFlowError("Cannot save session: no file path specified.")
+        self.save_to_file(target_path)
 
     def save_to_file(self, file_path: str) -> None:
         """Saves session metadata to a local JSON file."""
@@ -67,9 +96,16 @@ class Session:
             "dc_url": self.dc_url,
             "user_guid": self.user_guid,
             "phone": self.phone,
+            "is_authenticated": self.is_authenticated,
         }
+        # Ensure parent directory exists if specified
+        parent_dir = os.path.dirname(file_path)
+        if parent_dir:
+            os.makedirs(parent_dir, exist_ok=True)
+
         with open(file_path, "w", encoding="utf-8") as file:
             json.dump(data, file, indent=2)
+        self.file_path = file_path
 
     @classmethod
     def load_from_file(cls, file_path: str) -> "Session":
@@ -84,6 +120,8 @@ class Session:
             dc_url=data.get("dc_url", "https://messengerg2c332.iranlms.ir"),
             user_guid=data.get("user_guid"),
             phone=data.get("phone"),
+            is_authenticated=data.get("is_authenticated", True),
+            file_path=file_path,
         )
 
     @classmethod
@@ -159,4 +197,5 @@ class Session:
             dc_url=dc_url,
             user_guid=user_guid,
             phone=phone,
+            is_authenticated=True,
         )
