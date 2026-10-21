@@ -1,0 +1,890 @@
+[
+  {
+    "service": "MESSENGER_V6",
+    "function_name": "postSendCode",
+    "rpc_method": "sendCode",
+    "encrypt_needed": true,
+    "auth_needed": true,
+    "code_sample": "e=>(0,o.TB)({type:\"MESSENGER_V6\",payload:{data:e,method:r._s.SEND_CODE},isEncryptNeeded:!0,disableSign:!0})"
+  },
+  {
+    "service": "MESSENGER_V6",
+    "function_name": "postSignIn",
+    "rpc_method": "signIn",
+    "encrypt_needed": true,
+    "auth_needed": true,
+    "code_sample": "e=>(0,o.TB)({type:\"MESSENGER_V6\",payload:{data:e,method:r._s.SIGN_IN},isEncryptNeeded:!0,disableSign:!0})"
+  },
+  {
+    "service": "MESSENGER_V6",
+    "function_name": "loginTwoStepForgetPassword",
+    "rpc_method": "loginTwoStepForgetPassword",
+    "encrypt_needed": true,
+    "auth_needed": true,
+    "code_sample": "e=>(0,o.TB)({type:\"MESSENGER_V6\",payload:{data:e,method:r._s.LOGIN_TWO_STEP_FORGET_PASSWORD},isEncryptNeeded:!0,disableS"
+  },
+  {
+    "service": "MESSENGER_V6",
+    "function_name": "loginDisableTwoStep",
+    "rpc_method": "loginDisableTwoStep",
+    "encrypt_needed": true,
+    "auth_needed": true,
+    "code_sample": "e=>(0,o.TB)({type:\"MESSENGER_V6\",payload:{data:e,method:r._s.LOGIN_DISABLE_TWO_STEP},isEncryptNeeded:!0,disableSign:!0})"
+  },
+  {
+    "service": "MESSENGER_V6",
+    "function_name": "getObjectInfoByUsername",
+    "rpc_method": "get-object-info-by-username",
+    "encrypt_needed": true,
+    "auth_needed": true,
+    "code_sample": "e=>(0,o.TB)({type:\"MESSENGER_V6\",payload:{data:e,method:r._s.GET_OBJECT_INFO_BY_USERNAME},isEncryptNeeded:!0})"
+  },
+  {
+    "service": "MESSENGER_V6",
+    "function_name": "checkUsername",
+    "rpc_method": "checkUserUsername",
+    "encrypt_needed": true,
+    "auth_needed": true,
+    "code_sample": "e=>(0,o.TB)({type:\"MESSENGER_V6\",payload:{data:e,method:r._s.CHECK_USER_USERNAME},isEncryptNeeded:!0})"
+  },
+  {
+    "service": "MESSENGER_V6",
+    "function_name": "checkChannelUsername",
+    "rpc_method": "checkChannelUsername",
+    "encrypt_needed": true,
+    "auth_needed": true,
+    "code_sample": "e=>(0,o.TB)({type:\"MESSENGER_V6\",payload:{data:e,method:r._s.CHECK_CHANNEL_USERNAME},isEncryptNeeded:!0})"
+  },
+  {
+    "service": "MESSENGER_V6",
+    "function_name": "updateUsername",
+    "rpc_method": "updateUsername",
+    "encrypt_needed": true,
+    "auth_needed": true,
+    "code_sample": "e=>(0,o.TB)({type:\"MESSENGER_V6\",payload:{data:e,method:r._s.UPDATE_USERNAME},isEncryptNeeded:!0})"
+  },
+  {
+    "service": "MESSENGER",
+    "function_name": "setPublicKey",
+    "rpc_method": "setPublicKey",
+    "encrypt_needed": true,
+    "auth_needed": true,
+    "code_sample": "e=>(0,o.TB)({type:\"MESSENGER\",payload:{data:e,method:r._s.SET_PUBLIC_KEY},isEncryptNeeded:!0})"
+  },
+  {
+    "service": "BARCODE",
+    "function_name": "getBarcodeAction",
+    "rpc_method": "getBarcodeAction",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,yt.TB)({type:\"BARCODE\",payload:{data:e,method:Gn.GET_BARCODE_ACTION}})"
+  },
+  {
+    "service": "WEBAPP",
+    "function_name": "getWebAppFunction",
+    "rpc_method": "getWebAppFunction",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,yt.TB)({type:\"WEBAPP\",payload:{data:e,method:Qi.GET_WEBAPP_FUNCTION}})"
+  },
+  {
+    "service": "HOME",
+    "function_name": "setUserFavoriteServices",
+    "rpc_method": "setUserFavoriteServices",
+    "encrypt_needed": true,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"HOME\",payload:{data:e,method:i.SET_USER_FAVORITE_SERVICES},isEncryptNeeded:!0})"
+  },
+  {
+    "service": "SERVICE",
+    "function_name": "getTiles",
+    "rpc_method": "getTiles",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"SERVICE\",payload:{data:e,method:i.GET_TILES}})"
+  },
+  {
+    "service": "SERVICE",
+    "function_name": "getTagList",
+    "rpc_method": "getTagList",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"SERVICE\",payload:{data:e,method:i.GET_TAG_LIST}})"
+  },
+  {
+    "service": "SERVICE",
+    "function_name": "getTagObjects",
+    "rpc_method": "getTagObjects",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "(e,t)=>(0,r.TB)({type:\"SERVICE\",payload:{data:e,method:i.GET_TAG_OBJECTS},url:t})"
+  },
+  {
+    "service": "SERVICE",
+    "function_name": "getEndpointView",
+    "rpc_method": "getEndpointView",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"SERVICE\",payload:{data:e,method:i.GET_ENDPOINT_VIEW}})"
+  },
+  {
+    "service": "SERVICE",
+    "function_name": "getEndpointData",
+    "rpc_method": "getEndpointData",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "(e,t)=>(0,r.TB)({type:\"SERVICE\",payload:{data:e,method:i.GET_ENDPOINT_DATA},url:t})"
+  },
+  {
+    "service": "SERVICE",
+    "function_name": "searchQuery",
+    "rpc_method": "searchQuery",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "(e,t)=>(0,r.TB)({type:\"SERVICE\",payload:{data:e,method:i.SEARCH_QUERY},url:t})"
+  },
+  {
+    "service": "SERVICE",
+    "function_name": "getSearchStructure",
+    "rpc_method": "getSearchStructure",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"SERVICE\",payload:{data:e,method:i.GET_SEARCH_STRUCTURE}})"
+  },
+  {
+    "service": "SERVICE",
+    "function_name": "getExploreStructure",
+    "rpc_method": "getExploreStructure",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"SERVICE\",payload:{data:e,method:i.GET_EXPLORE_STRUCTURE}})"
+  },
+  {
+    "service": "SERVICE",
+    "function_name": "getDynamicPageViews",
+    "rpc_method": "getDynamicPageViews",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"SERVICE\",payload:{data:e,method:i.GET_DYNAMIC_PAGE_VIEWS}})"
+  },
+  {
+    "service": "SERVICE",
+    "function_name": "getDynamicPageData",
+    "rpc_method": "getDynamicPageData",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "(e,t)=>(0,r.TB)({type:\"SERVICE\",payload:{data:e,method:i.GET_DYNAMIC_PAGE_DATA},url:t})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getExplorePostTopics",
+    "rpc_method": "getExplorePostTopics",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_EXPLORE_POST_TOPICS}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getExplorePosts",
+    "rpc_method": "getExplorePosts",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_EXPLORE_POSTS}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getRelatedExplorePost",
+    "rpc_method": "getRelatedExplorePost",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_RELATED_EXPLORE_POST}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getPostLikes",
+    "rpc_method": "getPostLikes",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_POST_LIKES}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getComments",
+    "rpc_method": "getComments",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_COMMENTS}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "addComment",
+    "rpc_method": "addComment",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.ADD_COMMENT}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getCommentReplies",
+    "rpc_method": "getCommentReplies",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_COMMENT_REPLIES}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "addReplyComment",
+    "rpc_method": "addReplyComment",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.ADD_REPLY_COMMENT}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "likeCommentAction",
+    "rpc_method": "likeCommentAction",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.LIKE_COMMENT_ACTION}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getLikedCommentProfiles",
+    "rpc_method": "getLikedCommentProfiles",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_LIKED_COMMENT_PROFILES}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "likePostAction",
+    "rpc_method": "likePostAction",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.LIKE_POST_ACTION}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "isExistUsername",
+    "rpc_method": "isExistUsername",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.IS_EXIST_USERNAME}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getProfileInfo",
+    "rpc_method": "getProfileInfo",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_PROFILE_INFO}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getProfileByIds",
+    "rpc_method": "getProfileByIds",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_PROFILE_BY_IDS}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getMyProfileInfo",
+    "rpc_method": "getMyProfileInfo",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_MY_PROFILE_INFO}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getProfilePosts",
+    "rpc_method": "getProfilePosts",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_PROFILE_POSTS}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getTaggedPosts",
+    "rpc_method": "getTaggedPosts",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_TAGGED_POSTS}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getMyProfilePosts",
+    "rpc_method": "getMyProfilePosts",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_MY_PROFILE_POSTS}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getProfileList",
+    "rpc_method": "getProfileList",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_PROFILE_LIST}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getRecentFollowingPosts",
+    "rpc_method": "getRecentFollowingPosts",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_RECENT_FOLLOWING_POSTS}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getProfilesStories",
+    "rpc_method": "getProfilesStories",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_PROFILES_STORIES}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getStoryIds",
+    "rpc_method": "getStoryIds",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_STORY_IDS}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getStory",
+    "rpc_method": "getStory",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_STORY}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "addViewStory",
+    "rpc_method": "addViewStory",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.ADD_VIEW_STORY}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "actionOnRequest",
+    "rpc_method": "actionOnRequest",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.ACTION_ON_REQUEST}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "requestFollow",
+    "rpc_method": "requestFollow",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.REQUEST_FOLLOW}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getNewEvents",
+    "rpc_method": "getNewEvents",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_NEW_EVENTS}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getNewFollowRequests",
+    "rpc_method": "getNewFollowRequests",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_NEW_FOLLOW_REQUESTS}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getLiveInfo",
+    "rpc_method": "getLiveInfo",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_LIVE_INFO}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getLiveStatus",
+    "rpc_method": "getLiveStatus",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_LIVE_STATUS}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getLiveComments",
+    "rpc_method": "getLiveComments",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_LIVE_COMMENTS}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getSuggested",
+    "rpc_method": "getSuggested",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_SUGGESTED}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "searchProfile",
+    "rpc_method": "searchProfile",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.SEARCH_PROFILE}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "searchHashTag",
+    "rpc_method": "searchHashTag",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.SEARCH_HASHTAG}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "searchProfilesForTag",
+    "rpc_method": "search_profiles_for_tag",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.SEARCH_PROFILES_FOR_TAG}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getHashTagTrend",
+    "rpc_method": "getHashTagTrend",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_HASHTAG_TREND}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getPostsByHashTag",
+    "rpc_method": "getPostsByHashTag",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_POSTS_BY_HASHTAG}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getShareLink",
+    "rpc_method": "getShareLink",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_SHARE_LINK}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "setReportRecord",
+    "rpc_method": "setReportRecord",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.SET_REPORT_RECORD}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "setBlockProfile",
+    "rpc_method": "setBlockProfile",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.SET_BLOCK_PROFILE}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getBlockedProfiles",
+    "rpc_method": "getBlockedProfiles",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_BLOCKED_PROFILES}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "postBookmarkAction",
+    "rpc_method": "postBookmarkAction",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.POST_BOOKMARK_ACTION}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getBookmarkedPosts",
+    "rpc_method": "getBookmarkedPosts",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_BOOKMARKED_POSTS}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getProfileFollowers",
+    "rpc_method": "getProfileFollowers",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_PROFILE_FOLLOWERS}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "searchFollower",
+    "rpc_method": "searchFollower",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.SEARCH_FOLLOWER}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "requestUploadFile",
+    "rpc_method": "requestUploadFile",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.REQUEST_UPLOAD_FILE}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "addHighlight",
+    "rpc_method": "addHighlight",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.ADD_HIGHLIGHT}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "highlightStory",
+    "rpc_method": "highlightStory",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.HIGHLIGHT_STORY}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getProfileHighlights",
+    "rpc_method": "getProfileHighlights",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_PROFILE_HIGHLIGHTS}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getHighlightStoryIds",
+    "rpc_method": "getHighlightStoryIds",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_HIGHLIGHT_STORY_IDS}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "removeHighlightCollection",
+    "rpc_method": "removeHighlightCollection",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.REMOVE_HIGHLIGHT_COLLECTION}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "editHighlight",
+    "rpc_method": "editHighlight",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.EDIT_HIGHLIGHT}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getHighlightStories",
+    "rpc_method": "getHighlightStories",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_HIGHLIGHT_STORIES}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getProfileLinkItems",
+    "rpc_method": "getProfileLinkItems",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_PROFILE_LINK_ITEMS}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "createPage",
+    "rpc_method": "createPage",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.CREATE_PAGE}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "updateProfile",
+    "rpc_method": "updateProfile",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.UPDATE_PROFILE}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "addPost",
+    "rpc_method": "addPost",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.ADD_POST}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "addFilePost",
+    "rpc_method": "addFilePost",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.ADD_FILE_POST}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "publishPost",
+    "rpc_method": "publishPost",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.PUBLISH_POST}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "addPollAnswer",
+    "rpc_method": "addPollAnswer",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.ADD_POLL_ANSWER}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "addEmojiSliderAnswer",
+    "rpc_method": "addEmojiSliderAnswer",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.ADD_EMOJI_SLIDER_ANSWER}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getStoryViewers",
+    "rpc_method": "getStoryViewers",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_STORY_VIEWERS}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getPollResultsProfiles",
+    "rpc_method": "getPollResultsProfiles",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_POLL_RESULTS_PROFILES}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "getEmojiSliderResults",
+    "rpc_method": "getEmojiSliderResults",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.GET_EMOJI_SLIDER_RESULTS}})"
+  },
+  {
+    "service": "RUBINO",
+    "function_name": "deleteStory",
+    "rpc_method": "deleteStory",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"RUBINO\",payload:{data:e,method:i.sj.DELETE_STORY}})"
+  },
+  {
+    "service": "NEW_VOD",
+    "function_name": "getMedia",
+    "rpc_method": "vod-get-media",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"NEW_VOD\",payload:{data:e,method:i._t.GET_MEDIA}})"
+  },
+  {
+    "service": "NEW_VOD",
+    "function_name": "getMediaByShareString",
+    "rpc_method": "getMediaByShareString",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"NEW_VOD\",payload:{data:e,method:i._t.GET_MEDIA_BY_SHARE_STRING}})"
+  },
+  {
+    "service": "NEW_VOD",
+    "function_name": "getPlayInfo",
+    "rpc_method": "vod-get-play-info",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"NEW_VOD\",payload:{data:e,method:i._t.GET_PLAY_INFO}})"
+  },
+  {
+    "service": "NEW_VOD",
+    "function_name": "getSeasonEpisodes",
+    "rpc_method": "vod-get-season-episodes",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"NEW_VOD\",payload:{data:e,method:i._t.GET_SEASON_EPISODES}})"
+  },
+  {
+    "service": "NEW_VOD",
+    "function_name": "getRelated",
+    "rpc_method": "vod-get-related",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"NEW_VOD\",payload:{data:e,method:i._t.GET_RELATED}})"
+  },
+  {
+    "service": "NEW_VOD",
+    "function_name": "getCastDetails",
+    "rpc_method": "vod-get-cast-details",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"NEW_VOD\",payload:{data:e,method:i._t.GET_CAST_DETAILS}})"
+  },
+  {
+    "service": "NEW_VOD",
+    "function_name": "getCastMedias",
+    "rpc_method": "vod-get-cast-medias",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"NEW_VOD\",payload:{data:e,method:i._t.GET_CAST_MEDIAS}})"
+  },
+  {
+    "service": "NEW_VOD",
+    "function_name": "getNextMediaInfo",
+    "rpc_method": "vod-get-next-media-info",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"NEW_VOD\",payload:{data:e,method:i._t.GET_NEXT_MEDIA_INFO}})"
+  },
+  {
+    "service": "NEW_VOD",
+    "function_name": "actionOnMedia",
+    "rpc_method": "actionOnMedia",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"NEW_VOD\",payload:{data:e,method:i._t.ACTION_ON_MEDIA}})"
+  },
+  {
+    "service": "NEW_VOD",
+    "function_name": "getPlaySuggestedEpisode",
+    "rpc_method": "getPlaySuggestedEpisode",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"NEW_VOD\",payload:{data:e,method:i._t.GET_PLAY_SUGGESTED_EPISODE}})"
+  },
+  {
+    "service": "NEW_VOD",
+    "function_name": "getWishList",
+    "rpc_method": "vod-get-wish-list",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"NEW_VOD\",payload:{data:e,method:i._t.GET_WISH_LIST}})"
+  },
+  {
+    "service": "NEW_VOD",
+    "function_name": "search",
+    "rpc_method": "vod-search",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"NEW_VOD\",payload:{data:e,method:i._t.SEARCH}})"
+  },
+  {
+    "service": "NEW_VOD",
+    "function_name": "setCurrentPlayTime",
+    "rpc_method": "vod-set-current-play-time",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"NEW_VOD\",payload:{data:e,method:i._t.SET_CURRENT_PLAY_TIME}})"
+  },
+  {
+    "service": "NEW_VOD",
+    "function_name": "setSessionPlayDuration",
+    "rpc_method": "vod-set-session-play-duration",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"NEW_VOD\",payload:{data:e,method:i._t.SET_SESSION_PLAY_DURATION}})"
+  },
+  {
+    "service": "NEW_VOD",
+    "function_name": "getListing",
+    "rpc_method": "vod-get-listing",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"NEW_VOD\",payload:{data:e,method:i._t.GET_LISTING}})"
+  },
+  {
+    "service": "NEW_VOD",
+    "function_name": "getListItems",
+    "rpc_method": "getListItems",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"NEW_VOD\",payload:{data:e,method:i._t.GET_LIST_ITEMS}})"
+  },
+  {
+    "service": "NEW_VOD",
+    "function_name": "getCustomMenuItems",
+    "rpc_method": "vod-get-custom-menu-items",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"NEW_VOD\",payload:{data:e,method:i._t.GET_CUSTOM_MENU_ITEMS}})"
+  },
+  {
+    "service": "NEW_VOD",
+    "function_name": "viewCommercial",
+    "rpc_method": "viewCommercial",
+    "encrypt_needed": false,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"NEW_VOD\",payload:{data:e,method:i._t.VIEW_COMMERCIAL}})"
+  },
+  {
+    "service": "WALLET",
+    "function_name": "chargeWalletByToken",
+    "rpc_method": "chargeWalletByToken",
+    "encrypt_needed": true,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"WALLET\",payload:{data:e,method:i.E.CHARGE_WALLET_BY_TOKEN},isEncryptNeeded:!0})"
+  },
+  {
+    "service": "WALLET",
+    "function_name": "chargeWalletByUrl",
+    "rpc_method": "chargeWalletByUrl",
+    "encrypt_needed": true,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"WALLET\",payload:{data:e,method:i.E.CHARGE_WALLET_BY_URL},isEncryptNeeded:!0})"
+  },
+  {
+    "service": "WALLET",
+    "function_name": "checkAllowReceive",
+    "rpc_method": "checkAllowReceive",
+    "encrypt_needed": true,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"WALLET\",payload:{data:e,method:i.E.CHECK_ALLOW_RECEIVE},isEncryptNeeded:!0})"
+  },
+  {
+    "service": "WALLET",
+    "function_name": "transferCredit",
+    "rpc_method": "transferCredit",
+    "encrypt_needed": true,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"WALLET\",payload:{data:e,method:i.E.TRANSFER_CREDIT},isEncryptNeeded:!0})"
+  },
+  {
+    "service": "WALLET",
+    "function_name": "cashOut",
+    "rpc_method": "cashOut",
+    "encrypt_needed": true,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"WALLET\",payload:{data:e,method:i.E.CASH_OUT},isEncryptNeeded:!0})"
+  },
+  {
+    "service": "WALLET",
+    "function_name": "getWalletByShareLink",
+    "rpc_method": "getWalletByShareLink",
+    "encrypt_needed": true,
+    "auth_needed": true,
+    "code_sample": "e=>(0,r.TB)({type:\"WALLET\",payload:{data:e,method:i.E.GET_WALLET_BY_SHARE_LINK},isEncryptNeeded:!0})"
+  }
+]

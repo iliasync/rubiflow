@@ -1,0 +1,1220 @@
+{
+  "handShake": {
+    "method": "handShake",
+    "function": "handshake",
+    "model_sample": "",
+    "context": "s.eventLog(\"reset reconnect\"),this.reconnectTimer=setTimeout(()=>{this.eventLog(\"reconnecting...\"),this.connectSocket()},1e3*vh.SocketWaitingTime))}ha"
+  },
+  "requestSendFile": {
+    "method": "requestSendFile",
+    "function": "requestSendFile",
+    "model_sample": "{file_name:e.name,size:e.size,mime:this.getExt(e.name)}",
+    "context": "size:o})}}catch(d){throw d}})))})(i,p++)}),r.promise}catch(i){throw delete this.progressFiles[e.file_id],i}}))}getThumbnail(e){return new Promise((t,i"
+  },
+  "getDCs": {
+    "method": "getDCs",
+    "function": "getDcs",
+    "model_sample": "",
+    "context": "h.DefaultWalletUrl],default_cdn_urls:{}},this.activeIndexDcs={api:0,bot:0,socket:0,dcs:0,rubino:0,wallet:0},this.nextUrlLocked={api:!1,bot:!1,socket:!"
+  },
+  "getBaseInfo": {
+    "method": "getBaseInfo",
+    "function": "getServiceBaseUrls",
+    "model_sample": "",
+    "context": "e:\"application/json\"}]}).success().then(t=>{for(let e in t)this.dcRepo[e]=t[e];this.set(\"dcs\",this.dcRepo),e(t)}).catch(e=>{t(e)})})}getServiceBaseUrl"
+  },
+  "getAbsObjects": {
+    "method": "getAbsObjects",
+    "function": "",
+    "model_sample": "{objects_guids:t.slice(0,50)}",
+    "context": "e cu.Service:return!0;default:return!1}}getAndSyncObjects(e){return gh(this,void 0,void 0,(function*(){try{const t=[];if(e.forEach(e=>{!this.getObject"
+  },
+  "getTime": {
+    "method": "getTime",
+    "function": "updateTimeOffset",
+    "model_sample": "",
+    "context": ";i.setHours(0),i.setMinutes(0),i.setSeconds(0);let n=0;const s={midnightOffset:t-Math.floor(+i/1e3),serverTimeOffset:n},r=this.store;return r&&(n=r,s."
+  },
+  "getMessagesUpdates": {
+    "method": "getMessagesUpdates",
+    "function": "getMessagesUpdate",
+    "model_sample": "{object_guid:e,state:i.hole.state}",
+    "context": ")).length>0&&this.resort(i,n),this.getMessageSlice(i,n,e)))}catch(i){throw i}}))}getMessagesUpdate(e,t){return gh(this,void 0,void 0,(function*(){try{"
+  },
+  "forwardMessages": {
+    "method": "forwardMessages",
+    "function": "forwardMessages",
+    "model_sample": "",
+    "context": ")}isDeleted(e,t){const i=this.getConv(e,!0);return i.deleted&&i.deleted[t+\"\"]}forwardMessages(e,t){return gh(this,void 0,void 0,(function*(){try{const"
+  },
+  "sendMessage": {
+    "method": "sendMessage",
+    "function": "sendSimpleMessage",
+    "model_sample": "",
+    "context": ".message_updates.length?\"SentMessage\":\"Silent\")}),this.socketService.updateChat(i.chat_update)}}catch(e){throw e}}))}sendSimpleMessage(e){return gh(th"
+  },
+  "editMessage": {
+    "method": "editMessage",
+    "function": "editMessage",
+    "model_sample": "",
+    "context": "rvice.updateChatDraft(t.draft_message_update),this.socketService.updateChat(t.chat_update)}}catch(t){throw t}}))}editMessage(e){return gh(this,void 0,"
+  },
+  "setPinMessage": {
+    "method": "setPinMessage",
+    "function": "pinMessage",
+    "model_sample": "",
+    "context": "e(t,i.message_update,\"Silent\"),this.socketService.updateChat(i.chat_update),i.message_update}catch(t){throw t}}))}pinMessage(e){return gh(this,void 0,"
+  },
+  "clickMessageUrl": {
+    "method": "clickMessageUrl",
+    "function": "clickMessageUrl",
+    "model_sample": "",
+    "context": "this.updateMessage(t,i.message_update,\"Silent\"),this.socketService.updateChat(i.chat_update),i.message_update;throw i.status}catch(t){throw t}}))}cli"
+  },
+  "deleteMessages": {
+    "method": "deleteMessages",
+    "function": "",
+    "model_sample": "",
+    "context": ".findIndex(t=>t.message_id===e);t>=0&&this.pendingMessages.splice(t,1)}),void this.messageEvent.emit({object_guid:e.object_guid,action:Im.Deleted,mess"
+  },
+  "searchChatMessages": {
+    "method": "searchChatMessages",
+    "function": "searchChatMessages",
+    "model_sample": "",
+    "context": "t({object_guid:e,action:Im.Deleted,message_ids:[t]})}updateMessageByGuid(e,t){const i=this.getConv(e);this.updateMessage(i,t,\"Update\")}searchChatMessa"
+  },
+  "searchGlobalMessages": {
+    "method": "searchGlobalMessages",
+    "function": "searchGlobalMessage",
+    "model_sample": "",
+    "context": "d this.dcService.getResponsePost({method:\"searchChatMessages\",model:e}).success(t,\"message_search\")).message_ids}catch(i){throw i}}))}searchGlobalMess"
+  },
+  "getMessagesByID": {
+    "method": "getMessagesByID",
+    "function": "",
+    "model_sample": "{object_guid:i.object_guid,message_ids:s}",
+    "context": "atch(i){throw i}}))}getMessagesById(e,t){return gh(this,void 0,void 0,(function*(){try{const i=this.getConv(e,!0),n={},s=[];if((t||[]).forEach(e=>{i.m"
+  },
+  "reportObject": {
+    "method": "reportObject",
+    "function": "reportObject",
+    "model_sample": "",
+    "context": "id,message_ids:s}}).success();(e.messages||[]).length>0&&e.messages.forEach(e=>{n[e.message_id]=e})}return t.map(e=>n[e])}catch(i){throw i}}))}reportO"
+  },
+  "sendWalletTransferMessage": {
+    "method": "sendWalletTransferMessage",
+    "function": "sendWalletTransfer",
+    "model_sample": "",
+    "context": "dden_pinned[e]=t,this.storageService.set({hidden_pinned:this.hidden_pinned})}sendWalletTransfer(e){return gh(this,void 0,void 0,(function*(){try{const"
+  },
+  "getRelatedObjects": {
+    "method": "getRelatedObjects",
+    "function": "getRelatedObjects",
+    "model_sample": "{object_guid:e,start_id:t}",
+    "context": ".object_guid,action:Im.CheckRelated,message_ids:[],data:{message:n}})}}catch(t){}}))}deleteRelated(e){delete this.getConv(e,!0).related}getRelatedObje"
+  },
+  "getMessagesInterval": {
+    "method": "getMessagesInterval",
+    "function": "getAndSyncMessagesInterval",
+    "model_sample": "{object_guid:e,start_id:t}",
+    "context": "s.dcService.getResponsePost({method:\"getRelatedObjects\",model:{object_guid:e,start_id:t}}).success()}catch(i){throw i}}))}getAndSyncMessagesInterval(e"
+  },
+  "getMessages": {
+    "method": "getMessages",
+    "function": "getAndSyncMessages",
+    "model_sample": "",
+    "context": ":[]},media_hole:{items:[]}}),i}getAndSyncMessages(e,t,i){return gh(this,void 0,void 0,(function*(){try{const n=\"FromMax\"===t.sort,s=this.getHole(e,t.f"
+  },
+  "addAddressBook": {
+    "method": "addAddressBook",
+    "function": "addAddressBook",
+    "model_sample": "",
+    "context": "(e,t){return gh(this,void 0,void 0,(function*(){return new Promise((i,n)=>{this.cState||this.initContacts(!1),i(this.localSearch(e,t))})}))}addAddress"
+  },
+  "deleteContact": {
+    "method": "deleteContact",
+    "function": "deleteContact",
+    "model_sample": "{user_guid:e}",
+    "context": "ser&&(this.store[t.user.user_guid]=t.user,this.absService.syncObjectInfo(t.user,cu.User)),this.onChanged.next(\"Time\"),t}catch(t){throw t}}))}deleteCon"
+  },
+  "getContacts": {
+    "method": "getContacts",
+    "function": "getContacts",
+    "model_sample": "{start_id:t}",
+    "context": "Contacts(){return gh(this,void 0,void 0,(function*(){try{this.getTimeout&&clearTimeout(this.getTimeout),yield this.getContacts(!0)}catch(e){}}))}getCo"
+  },
+  "getContactsUpdates": {
+    "method": "getContactsUpdates",
+    "function": "getContactUpdates",
+    "model_sample": "{state:this.cState.state}",
+    "context": "&this.getUpdate(),this.saveToLc(),s}catch(n){throw this.getTimeout=setTimeout(()=>{this.getContacts(e,t,i)},1e3*vh.GetContactsRetryDelay),n}}))}getCon"
+  },
+  "resetContacts": {
+    "method": "resetContacts",
+    "function": "resetContacts",
+    "model_sample": "",
+    "context": "ate,this.saveToLc(),this.updateTimes(0,this.users))}catch(e){this.updateTimeout=setTimeout(()=>{this.getContactUpdates()},1e3*vh.GetContactsRetryDelay"
+  },
+  "getContactsLastOnline": {
+    "method": "getContactsLastOnline",
+    "function": "updateTimes",
+    "model_sample": "{user_guids:n.map(e=>e.user_guid)}",
+    "context": "his.promises[e];t&&t.cancel&&t.cancel()}}updateTimes(e,t){return gh(this,void 0,void 0,(function*(){try{let i=e+vh.ContactTimePageSize;i>t.length&&(i="
+  },
+  "setActionChat": {
+    "method": "setActionChat",
+    "function": "setActionChat",
+    "model_sample": "{object_guid:e,action:t,duration:i}",
+    "context": "row r}}))}getLatestArchivedChats(){return this.store.filter(e=>e.is_archived).slice(0,5)}chatIsEmpty(){return 0==(this.store||[]).length}setActionChat"
+  },
+  "seenChats": {
+    "method": "seenChats",
+    "function": "",
+    "model_sample": "",
+    "context": "&&(this.seenTimer&&clearTimeout(this.seenTimer),this.seenTimer=setTimeout(()=>{this.seenChat(this.seenQ)},2e3))}seenChat(e){return gh(this,void 0,void"
+  },
+  "sendChatActivity": {
+    "method": "sendChatActivity",
+    "function": "sendChatActivity",
+    "model_sample": "{object_guid:e,activity:t}",
+    "context": "en_list.hasOwnProperty(n)&&t.seen_list[n]===e[n]&&delete this.seenQ[n];this.updateChats(i.chat_updates,!0)}catch(t){this.seenChatQ()}}))}sendChatActiv"
+  },
+  "uploadAvatar": {
+    "method": "uploadAvatar",
+    "function": "uploadAvatar",
+    "model_sample": "{object_guid:e,activity:t}",
+    "context": "s.dcService.getResponsePost({method:\"sendChatActivity\",try_count:0,model:{object_guid:e,activity:t}}).success()).avatars}catch(i){throw i}}))}uploadAv"
+  },
+  "deleteAvatar": {
+    "method": "deleteAvatar",
+    "function": "deleteAvatar",
+    "model_sample": "{object_guid:e,avatar_id:t}",
+    "context": "Chat(t.chat_update,!0),this.convService.updateMessageByGuid(e.object_guid,t.message_update),t.user||t.group||t.channel}catch(t){throw t}}))}deleteAvat"
+  },
+  "getAvatars": {
+    "method": "getAvatars",
+    "function": "getAvatars",
+    "model_sample": "{object_guid:e}",
+    "context": "chat_update&&this.updateChat(i.chat_update,!0),i.message_update&&this.convService.updateMessageByGuid(e,i.message_update),n}catch(i){throw i}}))}getAv"
+  },
+  "deleteChatHistory": {
+    "method": "deleteChatHistory",
+    "function": "deleteChatHistory",
+    "model_sample": "{object_guid:e,last_message_id:t}",
+    "context": "ontact(e);i&&(t={object_guid:i.object_guid,type:i.type,abs_object:i})}return t}deleteChatHistory(e){return gh(this,void 0,void 0,(function*(){try{cons"
+  },
+  "deleteUserChat": {
+    "method": "deleteUserChat",
+    "function": "deleteUserChat",
+    "model_sample": "{user_guid:e,last_deleted_message_id:t||\"0\"}",
+    "context": ":t}}).success();this.convService.clearHistory(e),this.updateChat(i.chat_update)}catch(t){throw t}}))}deleteUserChat(e){return gh(this,void 0,void 0,(f"
+  },
+  "getObjectByUsername": {
+    "method": "getObjectByUsername",
+    "function": "getChatByUsername",
+    "model_sample": "{username:e}",
+    "context": "}}).success();this.convService.clearHistory(e),this.updateChat(i.chat_update)}catch(t){throw t}}))}getChatByUsername(e){return gh(this,void 0,void 0,("
+  },
+  "searchGlobalObjects": {
+    "method": "searchGlobalObjects",
+    "function": "",
+    "model_sample": "",
+    "context": "Reachend(n),s.length&&!t&&this.getChatsById(s).catch(e=>{}),this.syncChanges(n,i,!1)}searchGlobalObjects(e,t,i){return gh(this,void 0,void 0,(function"
+  },
+  "deleteBotChat": {
+    "method": "deleteBotChat",
+    "function": "deleteBotChat",
+    "model_sample": "{bot_guid:e,last_deleted_message_id:t||\"0\"}",
+    "context": "is.onActivity.next([{type:vu.ChangedDraft,object_guid:e.chat_object_guid,draft_text:e.message.text}])}deleteBotChat(e){return gh(this,void 0,void 0,(f"
+  },
+  "getMessageShareUrl": {
+    "method": "getMessageShareUrl",
+    "function": "getMessageShareUrl",
+    "model_sample": "{object_guid:e,message_id:t}",
+    "context": "id:e,last_deleted_message_id:t||\"0\"}}).success();this.convService.clearHistory(e),this.updateChat(i.chat_update)}catch(t){throw t}}))}getMessageShareU"
+  },
+  "clearDrafts": {
+    "method": "clearDrafts",
+    "function": "clearDrafts",
+    "model_sample": "{object_guid:e,message_id:t}",
+    "context": "nsePost({method:\"getMessageShareUrl\",model:{object_guid:e,message_id:t}}).success();return i.has_share_url&&i.share_url}catch(i){throw i}}))}clearDraf"
+  },
+  "getAllDrafts": {
+    "method": "getAllDrafts",
+    "function": "getAllDrafts",
+    "model_sample": "",
+    "context": "l:{action:e,object_guid:t}}).success();\"All\"===e?this.draftService.saveAll([]):this.updateDrafts(i.draft_message_updates)}catch(i){throw i}}))}getAllD"
+  },
+  "setChatUseTime": {
+    "method": "setChatUseTime",
+    "function": "setChatUseTime",
+    "model_sample": "{object_guid:e,time:t}",
+    "context": "s();this.draftService.saveAll(e.draft_messages),this.updateDrafts(e.draft_messages.map(e=>({action:\"New\",draft_message:e})))}catch(e){throw e}}))}setC"
+  },
+  "getChatsByID": {
+    "method": "getChatsByID",
+    "function": "getChatsById",
+    "model_sample": "{object_guids:e}",
+    "context": "indexOf(t)>=0}getType(e){switch(e[0]){case\"c\":return cu.Channel;case\"g\":return cu.Group;case\"b\":return cu.Bot;case\"u\":default:return cu.User}}getChats"
+  },
+  "getChats": {
+    "method": "getChats",
+    "function": "getChats",
+    "model_sample": "{start_id:e}",
+    "context": "adingChats=!1,this.appService.emitLoading(Fp.Failed),this.loadingTimeout=setTimeout(()=>{this.reloadChats()},1e3*vh.ChatUpdateTimeout)}}))}getChats(e)"
+  },
+  "getChatsUpdates": {
+    "method": "getChatsUpdates",
+    "function": "getChatUpdates",
+    "model_sample": "{state:this.chatState.state}",
+    "context": ":1:t.time_string.localeCompare(e.time_string)}getChatUpdates(){return gh(this,void 0,void 0,(function*(){if(this.reloadingChats)this.nextUpdate();else"
+  },
+  "updateProfile": {
+    "method": "updateProfile",
+    "function": "updateProfile",
+    "model_sample": "",
+    "context": "t s=this.profileService.getProfile();this.myUserId=s.user_guid}initProfile(){const e=this.profileService.getProfile();e&&this.saveUser(e,!0)}updatePro"
+  },
+  "getUserSetting": {
+    "method": "getUserSetting",
+    "function": "updateUserSetting",
+    "model_sample": "",
+    "context": "od:\"updateProfile\",model:e}).success();return this.saveUser(t.user),this.chatService.changedChat(t.user.user_guid),t}catch(t){throw t}}))}updateUserSe"
+  },
+  "checkUserUsername": {
+    "method": "checkUserUsername",
+    "function": "checkMyUsername",
+    "model_sample": "{username:e}",
+    "context": "n(null===(t=this.setting)||void 0===t?void 0:t.access_list.indexOf(e))>=0}checkMyUsername(e){return gh(this,void 0,void 0,(function*(){try{if(this.che"
+  },
+  "requestDeleteAccount": {
+    "method": "requestDeleteAccount",
+    "function": "requestDeleteAccount",
+    "model_sample": "{username:e}",
+    "context": "thod:\"checkUserUsername\",model:{username:e}}).success(),(yield this.checkUsernameReq).exist)throw\"UsernameExist\";return!0}catch(t){throw t}}))}request"
+  },
+  "updateUsername": {
+    "method": "updateUsername",
+    "function": "updateMyUsername",
+    "model_sample": "{username:e}",
+    "context": "ice.getResponsePost({method:\"requestDeleteAccount\"}).success()}catch(e){throw e}}))}updateMyUsername(e){return gh(this,void 0,void 0,(function*(){try{"
+  },
+  "setAskSpamAction": {
+    "method": "setAskSpamAction",
+    "function": "setAskSpamAction",
+    "model_sample": "",
+    "context": "s();if(t.status!==Um.OK)throw t.status;return this.saveUser(t.user),this.chatService.changedChat(t.user.user_guid),t}catch(t){throw t}}))}setAskSpamAc"
+  },
+  "getUserInfo": {
+    "method": "getUserInfo",
+    "function": "getUserInfo",
+    "model_sample": "{user_guid:e}",
+    "context": "then(t=>{e(t)}).catch(()=>{})})}isMyUserId(e){return this.myUserId===e}getUserInfo(e,t){return gh(this,void 0,void 0,(function*(){try{this.tryGetInfo["
+  },
+  "getGroupVoiceChat": {
+    "method": "getGroupVoiceChat",
+    "function": "getGroupVoiceChat",
+    "model_sample": "{voice_chat_id:e.group_voice_chat_id,chat_guid:e.object_guid}",
+    "context": "hat_id]}getGroupVoiceChat(e,t){return gh(this,void 0,void 0,(function*(){try{if(!t&&this.voice_chats[e.object_guid])return this.voice_chats[e.object_g"
+  },
+  "createGroupVoiceChat": {
+    "method": "createGroupVoiceChat",
+    "function": "createGroupVoiceChat",
+    "model_sample": "{chat_guid:e}",
+    "context": "roup_voice_chat,n,s),this.onUpdateSetting.next({object_guid:e.object_guid,action:r_.Created}),i.group_voice_chat}catch(i){throw i}}))}createGroupVoice"
+  },
+  "joinGroupVoiceChat": {
+    "method": "joinGroupVoiceChat",
+    "function": "joinGroupVoiceChat",
+    "model_sample": "",
+    "context": "up_voice_chat_update.group_voice_chat;if(\"VoiceChatExist\"==t.status)return t.exist_group_voice_chat;throw t.status}catch(t){throw t}}))}joinGroupVoice"
+  },
+  "leaveGroupVoiceChat": {
+    "method": "leaveGroupVoiceChat",
+    "function": "",
+    "model_sample": "{chat_guid:e,voice_chat_id:t}",
+    "context": "chat_participate_update]),t}catch(t){throw t}}))}leaveGroupVoiceChat(e,t){return gh(this,void 0,void 0,(function*(){try{this.closeVc(!0),this.onUpdate"
+  },
+  "setGroupVoiceChatState": {
+    "method": "setGroupVoiceChatState",
+    "function": "setGroupVoiceChatState",
+    "model_sample": "{chat_guid:e,voice_chat_id:t}",
+    "context": "upVoiceChat\",model:{chat_guid:e,voice_chat_id:t}}).success();return this.updateVc(i.group_voice_chat_update),i}catch(i){throw i}}))}setGroupVoiceChatS"
+  },
+  "discardGroupVoiceChat": {
+    "method": "discardGroupVoiceChat",
+    "function": "discardGroupVoiceChat",
+    "model_sample": "{chat_guid:e,voice_chat_id:t}",
+    "context": "el:e}).success();return\"OK\"==t.status&&this.syncUpdateParticipants([t.group_voice_chat_participate_update]),t}catch(t){throw t}}))}discardGroupVoiceCh"
+  },
+  "setGroupVoiceChatSetting": {
+    "method": "setGroupVoiceChatSetting",
+    "function": "setGroupVoiceChatSetting",
+    "model_sample": "",
+    "context": ".clearVoiceChat(e),this.closeVc(!0),this.onUpdateVc.next({chat_guid:e,voice_chat_id:t,action:\"Discarded\"}),i}catch(i){throw i}}))}setGroupVoiceChatSet"
+  },
+  "getGroupVoiceChatUpdates": {
+    "method": "getGroupVoiceChatUpdates",
+    "function": "tGroupVoiceChatUpdates",
+    "model_sample": "{chat_guid:e.chat_guid,voice_chat_id:e.voice_chat_id,state:e.state}",
+    "context": "tGroupVoiceChatUpdates(){return gh(this,void 0,void 0,(function*(){console.log(\"vc - connected2\");try{if(!this.current_chat_id)return;const e=this.voi"
+  },
+  "getGroupVoiceChatParticipantsByObjectGuids": {
+    "method": "getGroupVoiceChatParticipantsByObjectGuids",
+    "function": "getParticipantsByUserGuid",
+    "model_sample": "{chat_guid:t[0].chat_guid_type.object_guid,voice_chat_id:t[0].voice_chat_id,object_guids:t.map(e=>e.participant_object_guid_type.object_guid)}",
+    "context": "th>0&&this.getParticipantsByUserGuid(this.voice_chats[e[0].chat_guid_type.object_guid],t),this.syncParticipantsUI(e)}catch(t){}}))}getParticipantsByUs"
+  },
+  "sendGroupVoiceChatActivity": {
+    "method": "sendGroupVoiceChatActivity",
+    "function": "sendGroupVoiceChatActivity",
+    "model_sample": "",
+    "context": ",t){const i=this.voice_chats[e];i&&t.forEach(e=>{delete i.participant_objects[e.object_guid]})}sendGroupVoiceChatActivity(e){return gh(this,void 0,voi"
+  },
+  "getDisplayAsInGroupVoiceChat": {
+    "method": "getDisplayAsInGroupVoiceChat",
+    "function": "getDisplayAsInGroupVoiceChat",
+    "model_sample": "{chat_guid:e,start_id:t}",
+    "context": "ded\"})):this.onUpdateVc.next({chat_guid:t,voice_chat:this.voice_chats[t].vc,voice_chat_id:e.voice_chat_id,action:\"Updated\"})}getDisplayAsInGroupVoiceC"
+  },
+  "transcribeVoice": {
+    "method": "transcribeVoice",
+    "function": "transcribeVoice",
+    "model_sample": "{chat_guid:e,start_id:t}",
+    "context": "ld this.dcService.getResponsePost({method:\"getDisplayAsInGroupVoiceChat\",model:{chat_guid:e,start_id:t}}).success()}catch(i){throw i}}))}transcribeVoi"
+  },
+  "getTranscription": {
+    "method": "getTranscription",
+    "function": "getTranscribe",
+    "model_sample": "{transcription_id:t,message_id:e}",
+    "context": "ct_guid:t}}).success();if(\"OK\"===i.status)return yield this.getTranscribe(e,i.transcription_id);throw new Error(i.status)}catch(i){throw i}}))}getTran"
+  },
+  "getGroupVoiceChatParticipants": {
+    "method": "getGroupVoiceChatParticipants",
+    "function": "loadMoreParticipantsApi",
+    "model_sample": "{chat_guid:e,voice_chat_id:t.voice_chat_id,start_id:t.next_start_id}",
+    "context": "dateDelay)).subscribe(()=>{this.getGroupVoiceChatUpdates()}),this.timerSub.unsubscribeBy(this.subscriber)}))}loadMoreParticipantsApi(e){return gh(this"
+  },
+  "getGroupInfo": {
+    "method": "getGroupInfo",
+    "function": "getGroupInfo",
+    "model_sample": "{group_guid:e}",
+    "context": "e{constructor(e,t,i,n,s,r){this.dcService=e,this.chatService=t,this.absService=i,this.convService=n,this.vcService=s,this.broadcastEvent=r}getGroupIn"
+  },
+  "getGroupLink": {
+    "method": "getGroupLink",
+    "function": "getGroupLink",
+    "model_sample": "{group_guid:e}",
+    "context": "ice.syncChat(i.chat),i.group.join_request_info=i.join_request_info,this.absService.syncObjectInfo(i.group,cu.Group)),i}catch(i){throw i}}))}getGroupLi"
+  },
+  "setGroupLink": {
+    "method": "setGroupLink",
+    "function": "setGroupLink",
+    "model_sample": "{group_guid:e}",
+    "context": "st({method:\"getGroupLink\",model:{group_guid:e}}).success(t);return i.join_link?i.join_link:yield this.setGroupLink(e,t)}catch(i){throw i}}))}setGroupL"
+  },
+  "getGroupAllMembers": {
+    "method": "getGroupAllMembers",
+    "function": "getGroupMembers",
+    "model_sample": "{group_guid:e}",
+    "context": "{try{return(yield this.dcService.getResponsePost({method:\"setGroupLink\",model:{group_guid:e}}).success(t)).join_link}catch(i){throw i}}))}getGroupMemb"
+  },
+  "getGroupDefaultAccess": {
+    "method": "getGroupDefaultAccess",
+    "function": "getGroupDefaultAccess",
+    "model_sample": "{group_guid:e,search_text:t.search_text||void 0,start_id:t.start_id}",
+    "context": "thod:\"getGroupAllMembers\",model:{group_guid:e,search_text:t.search_text||void 0,start_id:t.start_id}}).success()}catch(i){throw i}}))}getGroupDefaultA"
+  },
+  "setGroupDefaultAccess": {
+    "method": "setGroupDefaultAccess",
+    "function": "setGroupDefaultAccess",
+    "model_sample": "{group_guid:e}",
+    "context": "d this.dcService.getResponsePost({method:\"getGroupDefaultAccess\",model:{group_guid:e}}).success()).access_list}catch(t){throw t}}))}setGroupDefaultAcc"
+  },
+  "editGroupInfo": {
+    "method": "editGroupInfo",
+    "function": "editGroupInfo",
+    "model_sample": "{group_guid:e,access_list:t}",
+    "context": "yield this.dcService.getResponsePost({method:\"setGroupDefaultAccess\",model:{group_guid:e,access_list:t}}).success(),!0}catch(i){throw i}}))}editGroup"
+  },
+  "addGroup": {
+    "method": "addGroup",
+    "function": "addGroup",
+    "model_sample": "",
+    "context": "astEvent.emit(\"update_group\",t.group),t.message_update&&this.convService.updateMessageByGuid(e.object_guid,t.message_update)}catch(t){throw t}}))}addG"
+  },
+  "addGroupMembers": {
+    "method": "addGroupMembers",
+    "function": "addGroupMembers",
+    "model_sample": "{group_guid:e,member_guids:t}",
+    "context": "update&&this.convService.updateMessageByGuid(t.group.group_guid,t.message_update),t.chat_update&&t.chat_update.chat}catch(t){throw t}}))}addGroupMembe"
+  },
+  "banGroupMember": {
+    "method": "banGroupMember",
+    "function": "banGroupMember",
+    "model_sample": "{group_guid:e,member_guid:t,action:i}",
+    "context": "pdate,!0),this.chatService.updateChatMessage(e,i.message_update),this.broadcastEvent.emit(\"members_subscribe\",e)}catch(i){throw i}}))}banGroupMember(e"
+  },
+  "leaveGroup": {
+    "method": "leaveGroup",
+    "function": "leaveGroup",
+    "model_sample": "{group_guid:e}",
+    "context": "te_update&&this.vcService.syncUpdateParticipants([s.group_voice_chat_participate_update]),n&&this.broadcastEvent.emit(n,e)}catch(s){throw s}}))}leaveG"
+  },
+  "removeGroup": {
+    "method": "removeGroup",
+    "function": "removeGroup",
+    "model_sample": "{group_guid:e}",
+    "context": "rvice.getResponsePost({method:\"leaveGroup\",model:{group_guid:e}}).success();this.chatService.updateChat(t.chat_update,!0)}catch(t){throw t}}))}removeG"
+  },
+  "deleteNoAccessGroupChat": {
+    "method": "deleteNoAccessGroupChat",
+    "function": "deleteNoAccessGroupChat",
+    "model_sample": "{group_guid:e}",
+    "context": "onsePost({method:\"removeGroup\",model:{group_guid:e}}).success();this.chatService.updateChat(t.chat_update,!0)}catch(t){throw t}}))}deleteNoAccessGroup"
+  },
+  "joinGroup": {
+    "method": "joinGroup",
+    "function": "joinGroup",
+    "model_sample": "{group_guid:e}",
+    "context": "sponsePost({method:\"deleteNoAccessGroupChat\",model:{group_guid:e}}).success();this.chatService.updateChat(t.chat_update,!0)}catch(t){throw t}}))}joinG"
+  },
+  "groupPreviewByJoinLink": {
+    "method": "groupPreviewByJoinLink",
+    "function": "groupPreviewByJoinLink",
+    "model_sample": "{hash_link:e}",
+    "context": "),t.message_update&&this.chatService.updateChatMessage(t.group.group_guid,t.message_update),t.chat_update.chat}catch(t){throw t}}))}groupPreviewByJoin"
+  },
+  "getGroupMentionList": {
+    "method": "getGroupMentionList",
+    "function": "getGroupMentionList",
+    "model_sample": "{hash_link:e}",
+    "context": "({method:\"groupPreviewByJoinLink\",model:{hash_link:e}}).success();if(!t.is_valid)throw\"INVALID_HASH_LINK\";return t}catch(t){throw t}}))}getGroupMentio"
+  },
+  "getBannedGroupMembers": {
+    "method": "getBannedGroupMembers",
+    "function": "getBannedGroupMembers",
+    "model_sample": "{group_guid:e,search_text:t.search_text||void 0,start_id:t.start_id}",
+    "context": "(function*(){try{return yield this.dcService.getResponsePost({method:\"getGroupMentionList\",model:e}).success()}catch(t){throw t}}))}getBannedGroupMemb"
+  },
+  "getGroupAdminMembers": {
+    "method": "getGroupAdminMembers",
+    "function": "getGroupAdminMembers",
+    "model_sample": "{group_guid:e,search_text:t.search_text||void 0,start_id:t.start_id}",
+    "context": "st({method:\"getBannedGroupMembers\",model:{group_guid:e,search_text:t.search_text||void 0,start_id:t.start_id}}).success()}catch(i){throw i}}))}getGrou"
+  },
+  "getGroupAdminAccessList": {
+    "method": "getGroupAdminAccessList",
+    "function": "getGroupAdminAccessList",
+    "model_sample": "{group_guid:e,start_id:t.start_id,search_text:t.search_text}",
+    "context": ".getResponsePost({method:\"getGroupAdminMembers\",model:{group_guid:e,start_id:t.start_id,search_text:t.search_text}}).success()}))}getGroupAdminAccessL"
+  },
+  "setGroupAdmin": {
+    "method": "setGroupAdmin",
+    "function": "setGroupAdmin",
+    "model_sample": "{group_guid:e,member_guid:t}",
+    "context": "dcService.getResponsePost({method:\"getGroupAdminAccessList\",model:{group_guid:e,member_guid:t}}).success()).access_list}catch(i){throw i}}))}setGroupA"
+  },
+  "getCommonGroups": {
+    "method": "getCommonGroups",
+    "function": "getCommonGroups",
+    "model_sample": "{user_guid:e}",
+    "context": "sponsePost({method:\"setGroupAdmin\",model:e}).success();return this.broadcastEvent.emit(\"members_admin\",e.group_guid),t}catch(t){throw t}}))}getCommonG"
+  },
+  "requestChangeObjectOwner": {
+    "method": "requestChangeObjectOwner",
+    "function": "requestChangeObjectOwner",
+    "model_sample": "{user_guid:e}",
+    "context": "rn(yield this.dcService.getResponsePost({method:\"getCommonGroups\",model:{user_guid:e}}).success()).abs_groups}catch(t){throw t}}))}requestChangeObject"
+  },
+  "cancelChangeObjectOwner": {
+    "method": "cancelChangeObjectOwner",
+    "function": "cancelChangeObjectOwner",
+    "model_sample": "{object_guid:e}",
+    "context": "ion*(){try{return(yield this.dcService.getResponsePost({method:\"requestChangeObjectOwner\",model:e}).success()).status}catch(t){throw t}}))}cancelChang"
+  },
+  "getPendingObjectOwner": {
+    "method": "getPendingObjectOwner",
+    "function": "getPendingObjectOwner",
+    "model_sample": "{object_guid:e}",
+    "context": "*(){try{yield this.dcService.getResponsePost({method:\"cancelChangeObjectOwner\",model:{object_guid:e}}).success()}catch(t){throw t}}))}getPendingObject"
+  },
+  "replyRequestObjectOwner": {
+    "method": "replyRequestObjectOwner",
+    "function": "replyRequestObjectOwner",
+    "model_sample": "{object_guid:e}",
+    "context": "return yield this.dcService.getResponsePost({method:\"getPendingObjectOwner\",model:{object_guid:e}}).success()}catch(t){throw t}}))}replyRequestObjectO"
+  },
+  "getGroupOnlineCount": {
+    "method": "getGroupOnlineCount",
+    "function": "getGroupOnlineCount",
+    "model_sample": "{group_guid:e}",
+    "context": "uccess();this.chatService.updateChat(t.chat_update,!0),this.broadcastEvent.emit(\"members_subscribe\",e.object_guid)}catch(t){throw t}}))}getGroupOnline"
+  },
+  "getGroupMessageReadParticipants": {
+    "method": "getGroupMessageReadParticipants",
+    "function": "getReadParticipants",
+    "model_sample": "{group_guid:e}",
+    "context": "ield this.dcService.getResponsePost({method:\"getGroupOnlineCount\",model:{group_guid:e}}).success()).online_count}catch(t){throw t}}))}getReadParticipa"
+  },
+  "getBotInfo": {
+    "method": "getBotInfo",
+    "function": "getBotInfo",
+    "model_sample": "{bot_guid:e}",
+    "context": "tes={},this.storageService.get(\"bot_states\",e=>{this.bot_states=e||{}})}getBotInfo(e,t){return gh(this,void 0,void 0,(function*(){try{this.tryGetInfo["
+  },
+  "getServiceInfo": {
+    "method": "getServiceInfo",
+    "function": "getServiceInfo",
+    "model_sample": "{service_guid:e}",
+    "context": "atService.syncChat(n.chat),n}catch(i){delete this.tryGetInfo[e]}}))}getServiceInfo(e,t){return gh(this,void 0,void 0,(function*(){try{this.tryGetInfo["
+  },
+  "stopBot": {
+    "method": "stopBot",
+    "function": "stopBot",
+    "model_sample": "{bot_guid:e}",
+    "context": "this.tryGetInfo[e],this.absService.syncObjectInfo(n.service,cu.Service),this.chatService.syncChat(n.chat),n}catch(i){delete this.tryGetInfo[e]}}))}sto"
+  },
+  "getPaymentInfo": {
+    "method": "getPaymentInfo",
+    "function": "getPaymentInfo",
+    "model_sample": "{bot_guid:e}",
+    "context": "ce.getResponsePost({method:\"stopBot\",model:{bot_guid:e}}).success();this.chatService.updateChats([t.chat_update],!0)}catch(t){throw t}}))}getPaymentIn"
+  },
+  "sendMessageAPICall": {
+    "method": "sendMessageAPICall",
+    "function": "sendMessageAPICall",
+    "model_sample": "",
+    "context": "t_id:t}}).success();return i.message_update&&this.chatService.updateChatMessage(e,i.message_update),i.payment_info}catch(i){throw i}}))}sendMessageAPI"
+  },
+  "getSelection": {
+    "method": "getSelection",
+    "function": "getBotSelectionApi",
+    "model_sample": "{bot_guid:t,selection_id:i,start_id:n}",
+    "context": "rEach(t=>{this.chatService.updateChatMessage(e.object_guid,t)}),this.chatService.updateChat(t.chat_update,!0)}catch(t){throw t}}))}getBotSelectionApi("
+  },
+  "searchSelection": {
+    "method": "searchSelection",
+    "function": "searchBotSelectionApi",
+    "model_sample": "{bot_guid:t,selection_id:i,search_text:n,limit:s}",
+    "context": "ce.set({bot_states:this.bot_states})}getBotState(e){return this.bot_states[e]}equalBotState(e,t){return this.bot_states[e]==t}searchBotSelectionApi(e,"
+  },
+  "getChannelInfo": {
+    "method": "getChannelInfo",
+    "function": "getChannelInfo",
+    "model_sample": "{channel_guid:e}",
+    "context": "{constructor(e,t,i,n,s,r){this.dcService=e,this.chatService=t,this.convService=i,this.absService=n,this.broadcastEvent=s,this.vcService=r}getChannelIn"
+  },
+  "editChannelInfo": {
+    "method": "editChannelInfo",
+    "function": "editChannelInfo",
+    "model_sample": "",
+    "context": "_guid:e}}).success(t);return this.chatService.syncChat(i.chat),this.absService.syncObjectInfo(i.channel,cu.Channel),i}catch(i){throw i}}))}editChannel"
+  },
+  "addChannelMembers": {
+    "method": "addChannelMembers",
+    "function": "addChannelMembers",
+    "model_sample": "{channel_guid:e,member_guids:t}",
+    "context": "vService.updateMessageByGuid(e.object_guid,t.message_update),this.broadcastEvent.emit(\"update_channel\",t.channel)}catch(t){throw t}}))}addChannelMembe"
+  },
+  "addChannel": {
+    "method": "addChannel",
+    "function": "addChannel",
+    "model_sample": "",
+    "context": "el),this.chatService.syncChatByGuid(e),this.broadcastEvent.emit(\"members_subscribe\",e)}catch(i){throw i}}))}addChannel(e){return gh(this,void 0,void 0"
+  },
+  "banChannelMember": {
+    "method": "banChannelMember",
+    "function": "banChannelMember",
+    "model_sample": "{channel_guid:e,member_guid:t,action:i}",
+    "context": "his.convService.updateMessageByGuid(t.channel.channel_guid,t.message_update),t.chat_update&&t.chat_update.chat}catch(t){throw t}}))}banChannelMember(e"
+  },
+  "removeChannel": {
+    "method": "removeChannel",
+    "function": "removeChannel",
+    "model_sample": "{channel_guid:e}",
+    "context": "ChatByGuid(e),this.broadcastEvent.emit(\"Set\"==i?\"members_subscribe\":\"members_baned\",e),n&&this.broadcastEvent.emit(n,e)}catch(s){throw s}}))}removeCha"
+  },
+  "deleteServiceChat": {
+    "method": "deleteServiceChat",
+    "function": "removeService",
+    "model_sample": "{channel_guid:e}",
+    "context": "ponsePost({method:\"removeChannel\",model:{channel_guid:e}}).success();this.chatService.updateChats([t.chat_update],!0)}catch(t){throw t}}))}removeServi"
+  },
+  "joinChannelAction": {
+    "method": "joinChannelAction",
+    "function": "joinChannelAction",
+    "model_sample": "{service_guid:e,last_deleted_message_id:t}",
+    "context": "at\",model:{service_guid:e,last_deleted_message_id:t}}).success();this.chatService.updateChats([i.chat_update],!0)}catch(i){throw i}}))}joinChannelActi"
+  },
+  "joinChannelByLink": {
+    "method": "joinChannelByLink",
+    "function": "joinChannel",
+    "model_sample": "{hash_link:e}",
+    "context": "}).success();this.chatService.updateChats([i.chat_update],!0),t===_u.Leave&&this.convService.deleteRelated(e.object_guid)}catch(i){throw i}}))}joinCha"
+  },
+  "channelPreviewByJoinLink": {
+    "method": "channelPreviewByJoinLink",
+    "function": "channelPreviewByJoinLink",
+    "model_sample": "{hash_link:e}",
+    "context": "ervice.syncObjectInfo(t.channel,cu.Channel),this.chatService.updateChat(t.chat_update,!0),t.chat_update.chat}catch(t){throw t}}))}channelPreviewByJoin"
+  },
+  "checkChannelUsername": {
+    "method": "checkChannelUsername",
+    "function": "checkChannelUsername",
+    "model_sample": "{username:e}",
+    "context": "f(!t.is_valid)throw\"INVALID_HASH_LINK\";return t}catch(t){throw t}}))}checkChannelUsername(e){return gh(this,void 0,void 0,(function*(){try{if(this.che"
+  },
+  "getChannelAllMembers": {
+    "method": "getChannelAllMembers",
+    "function": "getChannelMembers",
+    "model_sample": "{username:e}",
+    "context": "checkChannelUsername\",model:{username:e}}).success(),(yield this.checkUsernameReq).exist)throw\"UsernameExist\";return!0}catch(t){throw t}}))}getChannel"
+  },
+  "getChannelAdminMembers": {
+    "method": "getChannelAdminMembers",
+    "function": "getChannelAdminMembers",
+    "model_sample": "{channel_guid:e,start_id:t.start_id,search_text:t.search_text||void 0}",
+    "context": "e.getResponsePost({method:\"getChannelAllMembers\",model:{channel_guid:e,start_id:t.start_id,search_text:t.search_text||void 0}}).success()}))}getChanne"
+  },
+  "updateChannelUsername": {
+    "method": "updateChannelUsername",
+    "function": "updateChannelUsername",
+    "model_sample": "{channel_guid:e,start_id:t.start_id,search_text:t.search_text}",
+    "context": "tResponsePost({method:\"getChannelAdminMembers\",model:{channel_guid:e,start_id:t.start_id,search_text:t.search_text}}).success()}))}updateChannelUserna"
+  },
+  "getChannelLink": {
+    "method": "getChannelLink",
+    "function": "getChannelLink",
+    "model_sample": "{channel_guid:e,username:t}",
+    "context": "dateChannelUsername\",model:{channel_guid:e,username:t}}).success();this.absService.syncObjectInfo(i.channel,cu.Channel)}catch(i){throw i}}))}getChanne"
+  },
+  "setChannelLink": {
+    "method": "setChannelLink",
+    "function": "setChannelLink",
+    "model_sample": "{channel_guid:e}",
+    "context": "{try{return(yield this.dcService.getResponsePost({method:\"getChannelLink\",model:{channel_guid:e}}).success()).join_link}catch(t){throw t}}))}setChanne"
+  },
+  "setChannelAdmin": {
+    "method": "setChannelAdmin",
+    "function": "setChannelAdmin",
+    "model_sample": "{channel_guid:e}",
+    "context": "ion*(){try{return(yield this.dcService.getResponsePost({method:\"setChannelLink\",model:{channel_guid:e}}).success()).join_link}catch(t){throw t}}))}set"
+  },
+  "getChannelAdminAccessList": {
+    "method": "getChannelAdminAccessList",
+    "function": "getChannelAdminAccessList",
+    "model_sample": "{channel_guid:e,member_guid:t}",
+    "context": "ost({method:\"setChannelAdmin\",model:e}).success(),this.broadcastEvent.emit(\"members_admin\",e.channel_guid)}catch(t){throw t}}))}getChannelAdminAccessL"
+  },
+  "getBannedChannelMembers": {
+    "method": "getBannedChannelMembers",
+    "function": "getBannedChannelMembers",
+    "model_sample": "{channel_guid:e,member_guid:t}",
+    "context": "sponsePost({method:\"getChannelAdminAccessList\",model:{channel_guid:e,member_guid:t}}).success()).access_list}catch(i){throw i}}))}getBannedChannelMemb"
+  },
+  "getProfilePosts": {
+    "method": "getProfilePosts",
+    "function": "getPost",
+    "model_sample": "{target_profile_id:e.post_profile_id,max_id:e.post_id,min_id:e.post_id,equal:!0,limit:1,sort:\"FromMax\"}",
+    "context": "e{constructor(e,t){this.dcService=e,this.chatService=t,this.posts={},this.stories={}}getPost(e){return gh(this,void 0,void 0,(function*(){try{if(this"
+  },
+  "getProfilesStoryList": {
+    "method": "getProfilesStoryList",
+    "function": "getStory",
+    "model_sample": "{profile_story_ids:[{story_ids:[e.story_id],profile_id:e.story_profile_id}",
+    "context": "cess();return this.posts[e.post_id]=t.posts[0],t.posts[0]}catch(t){throw t}}))}getStory(e){return gh(this,void 0,void 0,(function*(){try{if(this.stori"
+  },
+  "sendRubinoPost": {
+    "method": "sendRubinoPost",
+    "function": "sendPost",
+    "model_sample": "",
+    "context": "0],i.create_date=t.profiles[0],i.profile=t.profiles[0]||{},this.posts[e.story_id]=i),i}catch(t){throw t}}))}sendPost(e){return gh(this,void 0,void 0,("
+  },
+  "deleteFolder": {
+    "method": "deleteFolder",
+    "function": "deleteFolder",
+    "model_sample": "{folder_id:e}",
+    "context": "ions(){const e=this.folders||[];return(this.suggestedfolders||[]).filter(t=>e.findIndex(e=>t.suggestion_folder_id==e.suggestion_folder_id)<0)}deleteFo"
+  },
+  "addFolder": {
+    "method": "addFolder",
+    "function": "addFolder",
+    "model_sample": "",
+    "context": "(t=>t.folder_id==e),t.old_state==this.last_state?this.last_state=t.new_state:this.folders=null,this.changedInfo(Em.Folders)}catch(t){throw t}}))}addFo"
+  },
+  "editFolder": {
+    "method": "editFolder",
+    "function": "editFolder",
+    "model_sample": "",
+    "context": "e=t.new_state,this.folders.unshift(t.folder)):this.folders=null,this.changedInfo(Em.Folders)}catch(t){throw t}}))}editFolder(e,t){return gh(this,void"
+  },
+  "setPinChatInFolder": {
+    "method": "setPinChatInFolder",
+    "function": "setPinChatInFolder",
+    "model_sample": "{folder_id:t,object_guid:e,action:i}",
+    "context": "state?(this.last_state=n.new_state,this.updateFolder(n.folder)):this.folders=null,this.changedInfo(Em.Folders)}catch(i){throw i}}))}setPinChatInFolder"
+  },
+  "getFolders": {
+    "method": "getFolders",
+    "function": "getFoldersByApi",
+    "model_sample": "{last_state:this.last_state}",
+    "context": "del:{folder_id:t,object_guid:e,action:i}}).success();this.last_state=n.old_state,this.folders=void 0}catch(n){throw n}}))}getFoldersByApi(){return gh("
+  },
+  "getSuggestedFolders": {
+    "method": "getSuggestedFolders",
+    "function": "getSuggestedFoldersByApi",
+    "model_sample": "",
+    "context": "ch(e=>{const t=this.chatService.getChatsUnreadStatus(e);e.unread_count=t.count,e.unread_muted=t.muted})}getSuggestedFoldersByApi(){return gh(this,void"
+  },
+  "getMyStickerSets": {
+    "method": "getMyStickerSets",
+    "function": "getMyStickerSets",
+    "model_sample": "",
+    "context": "(e,t,i){this.dcService=e,this.messageEvent=t,this.absService=i,this.cached_stickers={}}getMyStickerSets(e){return gh(this,void 0,void 0,(function*(){t"
+  },
+  "getMyGifSet": {
+    "method": "getMyGifSet",
+    "function": "getMyGifs",
+    "model_sample": "{message_id:e,object_guid:t}",
+    "context": "ker_set_id)}),this.sticker_sets=t.filter(e=>(e.stickers||[]).length>0),this.sticker_sets}catch(t){throw t}}))}getMyGifs(){return gh(this,void 0,void 0"
+  },
+  "addToMyGifSet": {
+    "method": "addToMyGifSet",
+    "function": "addToMyGifSet",
+    "model_sample": "{message_id:e,object_guid:t}",
+    "context": "fs;const e=yield this.dcService.getResponsePost({method:\"getMyGifSet\"}).success();return this.my_gifs=e.gifs||[],this.my_gifs}catch(e){throw e}}))}add"
+  },
+  "searchStickers": {
+    "method": "searchStickers",
+    "function": "searchStickerSets",
+    "model_sample": "{message_id:e,object_guid:t}",
+    "context": "(){try{yield this.dcService.getResponsePost({method:\"addToMyGifSet\",model:{message_id:e,object_guid:t}}).success()}catch(i){throw i}}))}searchStickerS"
+  },
+  "getTrendStickerSets": {
+    "method": "getTrendStickerSets",
+    "function": "getTrendStickerSets",
+    "model_sample": "{search_text:e,start_id:t}",
+    "context": "hStickers\",model:{search_text:e,start_id:t}}).success()}catch(i){throw i}}))}getTrendStickerSets(e){return gh(this,void 0,void 0,(function*(){try{if(!"
+  },
+  "getStickerSetByID": {
+    "method": "getStickerSetByID",
+    "function": "getStickerSetByID",
+    "model_sample": "{sticker_set_id:e}",
+    "context": "trendStickersets=t),t}catch(t){throw t}}))}getStickerSetByID(e){return gh(this,void 0,void 0,(function*(){try{const t=this.sticker_sets.find(t=>t.stic"
+  },
+  "actionOnStickerSet": {
+    "method": "actionOnStickerSet",
+    "function": "actionStickerSet",
+    "model_sample": "{sticker_set_id:e.sticker_set_id,action:t}",
+    "context": "set_id:e}}).success();return i.sticker_set.stickers=i.stickers,this.cached_stickers[e]=i.sticker_set,i.sticker_set}catch(t){throw t}}))}actionStickerS"
+  },
+  "getStickersByEmoji": {
+    "method": "getStickersByEmoji",
+    "function": "getStickersByEmoji",
+    "model_sample": "{sticker_set_id:e.sticker_set_id,action:t}",
+    "context": "kerSet\",model:{sticker_set_id:e.sticker_set_id,action:t}}).success();return this.updateStickerSets(e,t),i.new_state}catch(i){throw i}}))}getStickersBy"
+  },
+  "getStickersBySetIDs": {
+    "method": "getStickersBySetIDs",
+    "function": "getStickersBySetIDs",
+    "model_sample": "{sticker_set_ids:e}",
+    "context": "throw t}}))}isInstalled(e){return this.sticker_sets&&this.sticker_sets.findIndex(t=>t.sticker_set_id==e)>=0}getStickersBySetIDs(e){return gh(this,void"
+  },
+  "getAvailableReactions": {
+    "method": "getAvailableReactions",
+    "function": "getAvailableReactions",
+    "model_sample": "",
+    "context": "&this.sticker_sets.push(e);break;case OS.Remove:i>=0&&this.sticker_sets.splice(i,1)}}))}getAvailableReactions(){return gh(this,void 0,void 0,(function"
+  },
+  "actionOnMessageReaction": {
+    "method": "actionOnMessageReaction",
+    "function": "",
+    "model_sample": "",
+    "context": "id],reaction_count:1,emoji_char:t.emoji_char,reaction_id:t.reaction_id,is_selected:!0}),this.messageEvent.emit({object_guid:t.object_guid,action:Im.Up"
+  },
+  "getChatReaction": {
+    "method": "getChatReaction",
+    "function": "getChatReaction",
+    "model_sample": "",
+    "context": ".reactions,this.messageEvent.emit({object_guid:t.object_guid,action:Im.Update,message_ids:[t.message_id]}),s.reactions}catch(n){throw n}}))}getChatRea"
+  },
+  "getMessageReactions": {
+    "method": "getMessageReactions",
+    "function": "getMessageReactions",
+    "model_sample": "",
+    "context": "void 0,void 0,(function*(){try{return yield this.dcService.getResponsePost({method:\"getChatReaction\",model:e}).success()}catch(t){}}))}getMessageReact"
+  },
+  "getMyArchivedStickerSets": {
+    "method": "getMyArchivedStickerSets",
+    "function": "getMyArchivedStickerSets",
+    "model_sample": "{search_text:t,start_id:e}",
+    "context": "is.allReactions;case\"Selected\":return this.allReactions.filter(t=>e.selected_reactions.indexOf(t.reaction_id)>=0)}}catch(t){}}))}getMyArchivedStickerS"
+  },
+  "getStickerSetting": {
+    "method": "getStickerSetting",
+    "function": "getStickerSetting",
+    "model_sample": "{search_text:t,start_id:e}",
+    "context": "yield this.dcService.getResponsePost({method:\"getMyArchivedStickerSets\",model:{search_text:t,start_id:e}}).success()}catch(i){throw i}}))}getStickerS"
+  },
+  "getMapView": {
+    "method": "getMapView",
+    "function": "getMapView",
+    "model_sample": "{location:e}",
+    "context": "f\",t.numbers))},directives:[yd],encapsulation:2}),e})();var YS=i(\"4R65\");let US=(()=>{class e{constructor(e){this.dcService=e,this.tryGetInfo={}}getMa"
+  },
+  "getBarcodeAction": {
+    "method": "getBarcodeAction",
+    "function": "getBarcodeAction",
+    "model_sample": "",
+    "context": "{}}))}callLink(e){e&&this.onNewLink.next(e)}getLinkType(e){const t=vh.LinkEntities;for(let i in t)if(0==e.indexOf(t[i]))return i;return\"\"}getBarcodeAc"
+  },
+  "getWebAppFunction": {
+    "method": "getWebAppFunction",
+    "function": "getWebApp",
+    "model_sample": "{app_id:e}",
+    "context": "ype\",value:\"application/json\"}],model:e}).success();if(\"Invalid\"==t.status||\"Payment\"==t.type_action)throw t.status;return t}catch(t){throw t}}))}getW"
+  },
+  "getLandingPage": {
+    "method": "getLandingPage",
+    "function": "getLandingPage",
+    "model_sample": "{app_id:e}",
+    "context": "ppFunction\",dcUrl:vh.WebAppUrl,not_encrypt:!0,not_decrypt:!0,api_version:\"1\",model:{app_id:e}}).success()}catch(t){throw t}}))}getLandingPage(e){var t"
+  },
+  "getLinkFromAppUrl": {
+    "method": "getLinkFromAppUrl",
+    "function": "getLinkFromAppUrl",
+    "model_sample": "{app_url:e}",
+    "context": "ess:e}}).success();return(null===(t=i.landing_page)||void 0===t?void 0:t.link)&&this.callLink(i.landing_page.link),i}catch(i){throw i}}))}getLinkFromA"
+  },
+  "getProfileLinkItems": {
+    "method": "getProfileLinkItems",
+    "function": "getProfileLinkItems",
+    "model_sample": "{app_url:e}",
+    "context": "(){try{return(yield this.dcService.getResponsePost({method:\"getLinkFromAppUrl\",model:{app_url:e}}).success()).link}catch(t){throw t}}))}getProfileLink"
+  },
+  "getlinkObject": {
+    "method": "getlinkObject",
+    "function": "getlinkObject",
+    "model_sample": "{object_guid:e}",
+    "context": "{return(yield this.dcService.getResponsePost({method:\"getProfileLinkItems\",model:{object_guid:e}}).success()).link_items}catch(t){throw t}}))}getlinkO"
+  },
+  "votePoll": {
+    "method": "votePoll",
+    "function": "votePoll",
+    "model_sample": "{poll_id:e,selection_index:t}",
+    "context": "ctives:[$_,Uv,iw,W_,Uy],encapsulation:2}),e})(),QE=(()=>{class e{constructor(e,t){this.dcService=e,this.chatService=t,this.onChangeStatus=new C}votePo"
+  },
+  "getPollStatus": {
+    "method": "getPollStatus",
+    "function": "getPollStatus",
+    "model_sample": "{poll_id:e,selection_index:t}",
+    "context": "\",model:{poll_id:e,selection_index:t}}).success();return this.onChangeStatus.next({status:i.poll_status,poll_id:e}),i}catch(i){throw i}}))}getPollStat"
+  },
+  "getPollOptionVoters": {
+    "method": "getPollOptionVoters",
+    "function": "getPollOptionVoters",
+    "model_sample": "{poll_id:e}",
+    "context": "PollStatus\",model:{poll_id:e}}).success(t);return this.onChangeStatus.next({status:i.poll_status,poll_id:e}),i}catch(i){throw i}}))}getPollOptionVoter"
+  },
+  "createPoll": {
+    "method": "createPoll",
+    "function": "createPoll",
+    "model_sample": "{poll_id:e,selection_index:t,start_id:i}",
+    "context": "ld this.dcService.getResponsePost({method:\"getPollOptionVoters\",model:{poll_id:e,selection_index:t,start_id:i}}).success()}catch(n){throw n}}))}create"
+  },
+  "getChatAds": {
+    "method": "getChatAds",
+    "function": "getChatAdsByApi",
+    "model_sample": "{state:this.state}",
+    "context": "\",t=>{t&&(this.state=t.state,this.ads=t.ads,this.onChanged.next(this.ads)),e(t)}),this.getChatAdsByApi()})}getChatAds(){return this.ads||[]}getChatAds"
+  },
+  "getLivePlayUrl": {
+    "method": "getLivePlayUrl",
+    "function": "getLivePlayUrl",
+    "model_sample": "{live_id:e,access_token:t}",
+    "context": "\\u0275prov=de({token:e,factory:e.\\u0275fac}),e})(),mT=(()=>{class e{constructor(e,t){this.dcService=e,this.chatService=t,this.onPush=new C}getLivePlay"
+  },
+  "getLiveStatus": {
+    "method": "getLiveStatus",
+    "function": "getLiveStatus",
+    "model_sample": "{live_id:e,access_token:t}",
+    "context": "return yield this.dcService.getResponsePost({method:\"getLivePlayUrl\",model:{live_id:e,access_token:t}}).success()}catch(i){throw i}}))}getLiveStatus(e"
+  },
+  "getLiveViewers": {
+    "method": "getLiveViewers",
+    "function": "getLiveViewers",
+    "model_sample": "{live_id:e,access_token:t}",
+    "context": "try_count:n,model:{live_id:e,access_token:t}}).success(i);return this.onPush.next({status:s.live_status,live_id:e}),s}catch(s){throw s}}))}getLiveView"
+  },
+  "sendLive": {
+    "method": "sendLive",
+    "function": "sendLive",
+    "model_sample": "{live_id:e,start_id:t}",
+    "context": "t({method:\"getLiveViewers\",model:{live_id:e,start_id:t}}).success()}catch(i){throw i}}))}sendLive(e){var t;return gh(this,void 0,void 0,(function*(){t"
+  },
+  "stopLive": {
+    "method": "stopLive",
+    "function": "stopLive",
+    "model_sample": "{live_id:e}",
+    "context": "pdateChatMessage(e.object_guid,i.message_update)),i}catch(i){throw i}}))}hasTerminated(e){return!e||[\"Finish\",\"Unsuccessful\"].indexOf(e.status)>=0}sto"
+  },
+  "addLiveComment": {
+    "method": "addLiveComment",
+    "function": "addLiveComment",
+    "model_sample": "{live_id:e}",
+    "context": "0,void 0,(function*(){try{return yield this.dcService.getResponsePost({method:\"stopLive\",model:{live_id:e}}).success()}catch(t){throw t}}))}addLiveCo"
+  },
+  "getLiveComments": {
+    "method": "getLiveComments",
+    "function": "getLiveComments",
+    "model_sample": "",
+    "context": "oid 0,void 0,(function*(){try{return yield this.dcService.getResponsePost({method:\"addLiveComment\",model:e}).success()}catch(t){throw t}}))}getLiveCom"
+  },
+  "setLiveSetting": {
+    "method": "setLiveSetting",
+    "function": "setLiveSetting",
+    "model_sample": "",
+    "context": "oid 0,void 0,(function*(){try{return yield this.dcService.getResponsePost({method:\"getLiveComments\",model:e}).success()}catch(t){throw t}}))}setLiveSe"
+  },
+  "getWalletTransferMessage": {
+    "method": "getWalletTransferMessage",
+    "function": "getWalletTransfer",
+    "model_sample": "",
+    "context": "cService=e,this.chatService=t,this.convService=i,this.transfers={}}getWalletTransfer(e){return gh(this,void 0,void 0,(function*(){try{if(this.transfer"
+  },
+  "sendCode": {
+    "method": "sendCode",
+    "function": "sendPhone",
+    "model_sample": "",
+    "context": "this.storageService=i,this.encKey=\"weqrvmnxmnvljflksjlkjdsaoiuouopm\",this.registeredDevice=!1,this.lockEvents=new jp(Np.Locked)}isRegisteredDevice(){r"
+  },
+  "loginTwoStepForgetPassword": {
+    "method": "loginTwoStepForgetPassword",
+    "function": "loginTwoStepForgetPassword",
+    "model_sample": "{phone_number:e}",
+    "context": "code(e))return this.lockEvents.next(Np.UnLocked),!0}checkPasscode(e){return e==yu.GetPasscode()}hasPasscode(){return void 0!==yu.GetPasscode()}loginTw"
+  },
+  "loginDisableTwoStep": {
+    "method": "loginDisableTwoStep",
+    "function": "loginDisableTwoStep",
+    "model_sample": "{phone_number:e}",
+    "context": "cService.getResponsePost({not_authorized:!0,method:\"loginTwoStepForgetPassword\",model:{phone_number:e}}).success().then(e=>{t(e)}).catch(e=>{i(e)})})}"
+  },
+  "logout": {
+    "method": "logout",
+    "function": "logout",
+    "model_sample": "",
+    "context": "ginDisableTwoStep(e){return new Promise((t,i)=>{this.dcService.getResponsePost({not_authorized:!0,method:\"loginDisableTwoStep\",model:e}).success().the"
+  },
+  "unregisterDevice": {
+    "method": "unregisterDevice",
+    "function": "unregisterDevice",
+    "model_sample": "",
+    "context": "uestDeleteAccount(){return new Promise((e,t)=>{this.dcService.getResponsePost({method:\"requestDeleteAccount\"}).success().then(t=>{e(t)}).catch(e=>{t(e"
+  },
+  "registerDevice": {
+    "method": "registerDevice",
+    "function": "",
+    "model_sample": "",
+    "context": "pp_version:vh.ClientInfo.version_prefix+vh.AppVersion,lang_code:vh.I18n.locale.split(\"-\")[0],system_version:S_(navigator),device_model:w_(),device_has"
+  },
+  "getMySessions": {
+    "method": "getMySessions",
+    "function": "getMySessions",
+    "model_sample": "{session_key:e}",
+    "context": "dating_chats\"),ys(1),Aa(\"ngSwitchCase\",\"offline\"))},directives:[Md,Ed,Td,Sd,Uv,pS],encapsulation:2}),e})(),EO=(()=>{class e extends P_{constructor(e){"
+  },
+  "terminateSession": {
+    "method": "terminateSession",
+    "function": "terminateSession",
+    "model_sample": "{session_key:e}",
+    "context": "this.dcService=e}getMySessions(){return new Promise((e,t)=>{this.dcService.getResponsePost({method:\"getMySessions\",model:{}}).success().then(t=>{e(t)}"
+  },
+  "terminateOtherSessions": {
+    "method": "terminateOtherSessions",
+    "function": "terminateOtherSessions",
+    "model_sample": "{session_key:e}",
+    "context": "eSession(e){return new Promise((t,i)=>{this.dcService.getResponsePost({method:\"terminateSession\",model:{session_key:e}}).success().then(e=>{t(e)}).cat"
+  },
+  "getWallpapers": {
+    "method": "getWallpapers",
+    "function": "getWallpapers",
+    "model_sample": "",
+    "context": "sponsePost({method:\"terminateOtherSessions\",model:{}}).success().then(t=>{e(t)}).catch(e=>{t(e)})})}getWallpapers(){return gh(this,void 0,void 0,(func"
+  },
+  "getAppearanceSetting": {
+    "method": "getAppearanceSetting",
+    "function": "getAppearanceSetting",
+    "model_sample": "",
+    "context": "{}}).success();return this.wallpapers=e,this.wallpapers}catch(e){throw e}}))}getAppearanceSetting(){return gh(this,void 0,void 0,(function*(){try{if(t"
+  },
+  "resetWallpapers": {
+    "method": "resetWallpapers",
+    "function": "resetWallpapers",
+    "model_sample": "",
+    "context": "getAppearanceSetting\",model:{}}).success();return this.appearance_setting=e.appearance_setting,this.appearance_setting}catch(e){throw e}}))}resetWallp"
+  },
+  "addSetWallpaper": {
+    "method": "addSetWallpaper",
+    "function": "addSetWallpaper",
+    "model_sample": "{thumbnail_file_id:e,main_file_id:t}",
+    "context": "lpapers={chat_background_colors:e.chat_background_colors,chat_background_wallpapers:e.chat_background_wallpapers},e}catch(e){throw e}}))}addSetWallpap"
+  },
+  "setSetting": {
+    "method": "setSetting",
+    "function": "setSettingObject",
+    "model_sample": "{settings:e,update_parameters:t}",
+    "context": "1,this.setSettingObject(t,[Yp.ChatBackgroundType,Yp.ChatBackgroundColor])}setSetting(e,t){const i={};return i[e]=t,this.setSettingObject(i,[e])}setSet"
+  },
+  "getUnconfirmedSessions": {
+    "method": "getUnconfirmedSessions",
+    "function": "getUnconfirmedSessions",
+    "model_sample": "{settings:e,update_parameters:t}",
+    "context": "try{yield this.dcService.getResponsePost({method:\"setSetting\",model:{settings:e,update_parameters:t}}).success()}catch(i){throw i}}))}getUnconfirmedSe"
+  },
+  "actionOnUnconfirmedSession": {
+    "method": "actionOnUnconfirmedSession",
+    "function": "actionOnUnconfirmedSession",
+    "model_sample": "{unconfirmed_session_key:e,action:t}",
+    "context": "n(yield this.dcService.getResponsePost({method:\"getUnconfirmedSessions\"}).success()).unconfirmed_sessions}catch(e){throw e}}))}actionOnUnconfirmedSess"
+  },
+  "getPrivacySetting": {
+    "method": "getPrivacySetting",
+    "function": "getPrivacySetting",
+    "model_sample": "",
+    "context": "(()=>{class e extends P_{constructor(e,t){super(),this.dcService=e,this.chatService=t}getPrivacySetting(){return gh(this,void 0,void 0,(function*(){tr"
+  },
+  "getTwoPasscodeStatus": {
+    "method": "getTwoPasscodeStatus",
+    "function": "getTwoPasscodeStatus",
+    "model_sample": "{password:e}",
+    "context": "n this.privacy_setting=e.privacy_setting,this.privacy_setting}catch(e){throw e}}))}getTwoPasscodeStatus(){return gh(this,void 0,void 0,(function*(){tr"
+  },
+  "checkTwoStepPasscode": {
+    "method": "checkTwoStepPasscode",
+    "function": "checkTwoStepPasscode",
+    "model_sample": "{password:e}",
+    "context": "tep_status;const e=yield this.dcService.getResponsePost({method:\"getTwoPasscodeStatus\"}).success();return this.two_step_status=e.two_step_status,this."
+  },
+  "turnOffTwoStep": {
+    "method": "turnOffTwoStep",
+    "function": "turnOffTwoStep",
+    "model_sample": "{password:e}",
+    "context": "status}catch(e){throw e}}))}checkTwoStepPasscode(e){return this.dcService.getResponsePost({method:\"checkTwoStepPasscode\",model:{password:e}}).success("
+  },
+  "requestChangePhoneNumber": {
+    "method": "requestChangePhoneNumber",
+    "function": "requestChangePhoneNumber",
+    "model_sample": "{password:e}",
+    "context": "ethod:\"turnOffTwoStep\",model:{password:e}}).success(),this.two_step_status.sign_in_type=Oy.Simple,this.update(this.two_step_status)}))}requestChangePh"
+  },
+  "verifyChangePhoneNumber": {
+    "method": "verifyChangePhoneNumber",
+    "function": "verifyChangePhoneNumber",
+    "model_sample": "{new_phone_number:e}",
+    "context": "(function*(){return yield this.dcService.getResponsePost({method:\"requestChangePhoneNumber\",model:{new_phone_number:e}}).success()}))}verifyChangePhon"
+  },
+  "abortTwoStepSetup": {
+    "method": "abortTwoStepSetup",
+    "function": "abortTwoStepSetup",
+    "model_sample": "{code:e,hash:t}",
+    "context": "gh(this,void 0,void 0,(function*(){return yield this.dcService.getResponsePost({method:\"verifyChangePhoneNumber\",model:{code:e,hash:t}}).success()}))}"
+  },
+  "abortSetRecoveryEmail": {
+    "method": "abortSetRecoveryEmail",
+    "function": "abortSetRecoveryEmail",
+    "model_sample": "{password:e}",
+    "context": ",this.two_step_status.pending_recovery_email=void 0,this.two_step_status.has_pending_recovery_email=!1,this.update(this.two_step_status))}))}abortSetR"
+  },
+  "changePassword": {
+    "method": "changePassword",
+    "function": "changePassword",
+    "model_sample": "",
+    "context": "us.has_pending_recovery_email=!1,this.two_step_status.pending_recovery_email=void 0,this.update(this.two_step_status))}catch(t){throw t}}))}changePass"
+  },
+  "setupTwoStepVerification": {
+    "method": "setupTwoStepVerification",
+    "function": "setupTwoStepVerification",
+    "model_sample": "",
+    "context": "Post({method:\"changePassword\",model:e}).success();return this.update(t.two_step_status),this.two_step_status}catch(t){throw t}}))}setupTwoStepVerifica"
+  },
+  "requestRecoveryEmail": {
+    "method": "requestRecoveryEmail",
+    "function": "requestRecoveryEmail",
+    "model_sample": "",
+    "context": "method:\"setupTwoStepVerification\",model:e}).success();return this.update(t.two_step_status),this.two_step_status}catch(t){throw t}}))}requestRecoveryE"
+  },
+  "resendCodeRecoveryEmail": {
+    "method": "resendCodeRecoveryEmail",
+    "function": "resendCodeRecoveryEmail",
+    "model_sample": "{password:e}",
+    "context": "sePost({method:\"requestRecoveryEmail\",model:e}).success();return this.update(t.two_step_status),this.two_step_status}catch(t){throw t}}))}resendCodeRe"
+  },
+  "verifyRecoveryEmail": {
+    "method": "verifyRecoveryEmail",
+    "function": "verifyRecoveryEmail",
+    "model_sample": "{password:e}",
+    "context": "ion*(){try{return this.dcService.getResponsePost({method:\"resendCodeRecoveryEmail\",model:{password:e}}).success()}catch(t){throw t}}))}verifyRecoveryE"
+  },
+  "getBlockedUsers": {
+    "method": "getBlockedUsers",
+    "function": "getBlockedUsers",
+    "model_sample": "{start_id:e}",
+    "context": ".getResponsePost({method:\"verifyRecoveryEmail\",model:e}).success();return\"IsValid\"==t.status&&this.update(t.two_step_status),t}catch(t){throw t}}))}ge"
+  },
+  "setBlockUser": {
+    "method": "setBlockUser",
+    "function": "setBlockUser",
+    "model_sample": "{start_id:e}",
+    "context": "eturn gh(this,void 0,void 0,(function*(){return this.dcService.getResponsePost({method:\"getBlockedUsers\",model:{start_id:e}}).success(t)}))}setBlockUs"
+  },
+  "getJoinLinks": {
+    "method": "getJoinLinks",
+    "function": "getJoinLinks",
+    "model_sample": "{object_guid:e,creator_guid:t}",
+    "context": "e})();const I0=ln(L0);let P0=(()=>{class e{constructor(e,t,i,n){this.dcService=e,this.chatService=t,this.convService=i,this.broadcastEvent=n}getJoinLi"
+  },
+  "revokeJoinLink": {
+    "method": "revokeJoinLink",
+    "function": "revokeJoinLink",
+    "model_sample": "{object_guid:e,creator_guid:t}",
+    "context": "y{return yield this.dcService.getResponsePost({method:\"getJoinLinks\",model:{object_guid:e,creator_guid:t}}).success()}catch(i){throw i}}))}revokeJoinL"
+  },
+  "deleteRevokedJoinLink": {
+    "method": "deleteRevokedJoinLink",
+    "function": "deleteRevokedJoinLink",
+    "model_sample": "{object_guid:e,join_link:t}",
+    "context": "turn yield this.dcService.getResponsePost({method:\"revokeJoinLink\",model:{object_guid:e,join_link:t}}).success()}catch(i){throw i}}))}deleteRevokedJoi"
+  },
+  "createJoinLink": {
+    "method": "createJoinLink",
+    "function": "createEditJoinLink",
+    "model_sample": "",
+    "context": "n*(){try{return yield this.dcService.getResponsePost({method:\"deleteRevokedJoinLink\",model:e}).success()}catch(t){throw t}}))}createEditJoinLink(e,t){"
+  },
+  "editJoinLink": {
+    "method": "editJoinLink",
+    "function": "",
+    "model_sample": "",
+    "context": "k\",model:e}).success()}catch(t){throw t}}))}createEditJoinLink(e,t){return gh(this,void 0,void 0,(function*(){try{return\"add\"===e?yield this.dcService"
+  },
+  "getJoinRequests": {
+    "method": "getJoinRequests",
+    "function": "getJoinRequests",
+    "model_sample": "",
+    "context": "d:\"createJoinLink\",model:t}).success():yield this.dcService.getResponsePost({method:\"editJoinLink\",model:t}).success()}catch(i){throw i}}))}getJoinReq"
+  },
+  "actionOnJoinRequest": {
+    "method": "actionOnJoinRequest",
+    "function": "actionOnJoinRequest",
+    "model_sample": "",
+    "context": "void 0,(function*(){try{return yield this.dcService.getResponsePost({method:\"getJoinRequests\",model:e}).success()}catch(t){throw t}}))}actionOnJoinReq"
+  },
+  "getJoinLinkUserJoined": {
+    "method": "getJoinLinkUserJoined",
+    "function": "getJoinLinkUserJoined",
+    "model_sample": "",
+    "context": "nt.emit(\"members_subscribe\",e.object_guid),this.broadcastEvent.emit(\"join_request_update\",t.join_request_info),t}catch(t){throw t}}))}getJoinLinkUserJ"
+  }
+}
